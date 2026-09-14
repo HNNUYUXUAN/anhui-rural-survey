@@ -1,0 +1,28 @@
+name: Verify public release
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install notebook dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-notebook.txt
+      - name: Verify archive boundary and hashes
+        run: python scripts/verify_release.py
+      - name: Execute the complete notebook
+        run: python scripts/build_analysis_notebook.py --execute

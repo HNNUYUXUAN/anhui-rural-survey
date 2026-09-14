@@ -1,0 +1,66 @@
+cff-version: 1.2.0
+message: "如使用本项目，请引用本文件给出的项目与报告信息。"
+title: "安徽农户持续种粮调研项目"
+type: dataset
+version: "1.0.0"
+date-released: "2026-09-14"
+repository-code: "https://github.com/HNNUYUXUAN/anhui-rural-survey"
+url: "https://github.com/HNNUYUXUAN/anhui-rural-survey"
+authors:
+  - family-names: "尹"
+    given-names: "梦杰"
+    affiliation: "淮南师范学院"
+  - family-names: "马"
+    given-names: "忠强"
+    affiliation: "淮南师范学院"
+  - family-names: "缪"
+    given-names: "雨轩"
+    affiliation: "淮南师范学院"
+  - family-names: "陈"
+    given-names: "静"
+    affiliation: "淮南师范学院"
+  - family-names: "潘"
+    given-names: "心月"
+    affiliation: "淮南师范学院"
+  - family-names: "张"
+    given-names: "译文"
+    affiliation: "淮南师范学院"
+  - family-names: "张"
+    given-names: "梦涵"
+    affiliation: "淮南师范学院"
+  - family-names: "缪"
+    given-names: "钰欢"
+    affiliation: "淮南师范学院"
+abstract: >-
+  本项目公开《把地种好，把日子过稳——稳定承包背景下安徽农户持续种粮的
+  约束结构》的公开版报告、聚合分析结果、图表数据、统计图、逻辑图和调查工具。
+keywords:
+  - "土地承包稳定"
+  - "持续种粮"
+  - "农业社会化服务"
+  - "安徽"
+license: "CC-BY-SA-4.0"
+preferred-citation:
+  type: report
+  title: "把地种好，把日子过稳——稳定承包背景下安徽农户持续种粮的约束结构"
+  year: 2026
+  version: "1.0.0"
+  institution:
+    name: "淮南师范学院"
+  authors:
+    - family-names: "尹"
+      given-names: "梦杰"
+    - family-names: "马"
+      given-names: "忠强"
+    - family-names: "缪"
+      given-names: "雨轩"
+    - family-names: "陈"
+      given-names: "静"
+    - family-names: "潘"
+      given-names: "心月"
+    - family-names: "张"
+      given-names: "译文"
+    - family-names: "张"
+      given-names: "梦涵"
+    - family-names: "缪"
+      given-names: "钰欢"

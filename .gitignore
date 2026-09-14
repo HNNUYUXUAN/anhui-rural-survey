@@ -1,0 +1,9 @@
+# Local environments and caches
+.conda/
+.cache/
+__pycache__/
+*.pyc
+.env
+.vscode/
+*.tmp
+.DS_Store

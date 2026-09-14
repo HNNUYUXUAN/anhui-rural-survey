@@ -1,0 +1,41 @@
+name: anhuirural-survey
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - libblas=*=*openblas
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - statsmodels
+  - linearmodels
+  - pingouin
+  - matplotlib
+  - seaborn
+  - plotly
+  - geopandas
+  - folium
+  - openpyxl
+  - pyarrow
+  - jupyterlab
+  - ipykernel
+  - nbformat
+  - nbclient
+  - nbconvert
+  - pillow
+  - python-docx
+  - cairosvg
+  - python-dotenv
+  - httpx
+  - requests
+  - tenacity
+  - tqdm
+  - tabulate
+  - pip:
+      - openai>=1.0
+      - factor-analyzer>=0.5
+      - semopy>=2.3
+      - pandera>=0.20

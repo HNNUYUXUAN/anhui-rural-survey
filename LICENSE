@@ -1,0 +1,24 @@
+安徽农户持续种粮调研项目采用双许可证：
+
+1. 软件代码
+
+`scripts/` 目录下的软件代码按 GNU Affero General Public License
+version 3 only（SPDX-License-Identifier: AGPL-3.0-only）授权。
+完整条款见 `LICENSES/AGPL-3.0-only.txt`。
+
+2. 原创研究内容与公开数据
+
+除软件代码和下述例外外，本仓库由青穗江淮调研团及署名作者享有权利的
+报告、说明文档、问卷、原创图表、聚合分析结果与图表数据，按 Creative
+Commons Attribution-ShareAlike 4.0 International
+（SPDX-License-Identifier: CC-BY-SA-4.0）授权。
+完整条款见 `LICENSES/CC-BY-SA-4.0.txt`。
+
+3. 例外
+
+- 参考文献的书目信息、外部链接、机构名称、标识和商标仍归各自权利人所有。
+- 本许可证不授予第三方全文、个人信息、肖像、隐私、商标、专利或其他未由
+  本项目权利人控制的权利。
+- 受控完整归档中未进入本公开包的材料不适用本仓库的开放许可声明。
+
+Copyright (c) 2026 青穗江淮调研团及各原创材料权利人

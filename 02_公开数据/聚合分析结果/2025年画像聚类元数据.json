@@ -1,0 +1,13 @@
+{
+  "method": "log/winsorized numeric + one-hot categorical + standardized KMeans",
+  "requested_k": 4,
+  "n": 2053,
+  "bootstrap_replicates": 200,
+  "status": "PARTIAL",
+  "seed_ari_mean": 0.987,
+  "seed_ari_min": 0.98,
+  "bootstrap_assignment_ari_mean": 0.779,
+  "bootstrap_assignment_ari_p05": 0.307,
+  "smallest_cluster_share_percent": 2.09,
+  "interpretation": "exploratory descriptive profiles"
+}
