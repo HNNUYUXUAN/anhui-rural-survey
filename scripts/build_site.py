@@ -127,7 +127,10 @@ def enhance(body: str, source: str, destination: str) -> tuple[str, str]:
         if figure.figcaption:
             number = re.match(r"图\s*(\d+(?:-\d+)?)", figure.figcaption.get_text(strip=True))
             if number:figure["id"] = "figure-" + number[1]
-    toc = "<ul>" + "".join(f'<li><a href="#{key}">{html.escape(label)}</a></li>' for key,label in headings) + "</ul>"
+    for paragraph in soup.find_all("p"):
+        if re.match(r"\[\d+\]\s", paragraph.get_text()):
+            paragraph["class"] = paragraph.get("class", []) + ["bibliography-entry"]
+    toc = ("<ul>" + "".join(f'<li><a href="#{key}">{html.escape(label)}</a></li>' for key,label in headings) + "</ul>") if headings else ""
     return str(soup), toc
 
 

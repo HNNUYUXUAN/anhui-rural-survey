@@ -11,3 +11,5 @@ main a{overflow-wrap:anywhere}figcaption strong{font-weight:normal}
 /* Reserve equation-number space even when a long formula scrolls horizontally. */
 .katex-display>.katex{width:max-content;min-width:100%}.katex-display>.katex>.katex-html{position:relative;padding-right:3em}
 @media print{.wide-table{min-width:0}td,th,td:first-child{min-width:0;padding:5px!important}th{white-space:normal!important}.math.block{font-size:9pt}}
+
+.bibliography-entry{text-align:left;padding-left:2em;text-indent:-2em}

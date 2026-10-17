@@ -39,6 +39,12 @@ class ReadingPageTests(unittest.TestCase):
         self.assertEqual(figure['id'], 'figure-1')
         self.assertEqual(figure.find_all(recursive=False)[-1].name, 'figcaption')
 
+    def test_bibliography_uses_hanging_entries_without_empty_navigation(self):
+        body, toc = enhance(render_markdown('# 参考文献\n\n[1] Author. Title.'),
+                            'references/bibliography.md', 'references/bibliography.html')
+        self.assertEqual(toc, '')
+        self.assertIsNotNone(BeautifulSoup(body, 'html.parser').select_one('p.bibliography-entry'))
+
 
 if __name__ == '__main__':
     unittest.main()
