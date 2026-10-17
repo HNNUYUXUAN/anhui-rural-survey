@@ -6,6 +6,7 @@ import base64
 import html
 import json
 import posixpath
+import re
 import shutil
 from pathlib import Path
 from urllib.parse import quote, unquote, urlsplit
@@ -20,6 +21,12 @@ REPO = "https://github.com/HNNUYUXUAN/anhui-rural-survey"
 MD = MarkdownIt("commonmark", {"html": True}).enable("table").use(dollarmath_plugin)
 ROUTES = {"README.md": "index.html", "report/report.md": "report/index.html",
           "report/README.md": "report/guide.html", "notebooks/README.md": "notebook/index.html"}
+
+
+def render_markdown(text: str) -> str:
+    # GitHub's code-delimited inline math also renders in the reading pages.
+    text = re.sub(r"\$`([^`\n]+)`\$", lambda match: "$" + match[1] + "$", text)
+    return MD.render(text)
 
 
 def route(path: str) -> str:
@@ -99,7 +106,7 @@ def notebook_body(output: Path) -> str:
     for cell in notebook["cells"]:
         source = "".join(cell["source"])
         if cell["cell_type"] == "markdown":
-            parts.append(MD.render(source))
+            parts.append(render_markdown(source))
             continue
         if cell["cell_type"] != "code": continue
         if cell.get("execution_count") is None:
@@ -155,7 +162,7 @@ def main() -> int:
         if relative_source.startswith("web/"):continue
         destination=route(relative_source)
         text=source.read_text(encoding="utf-8-sig")
-        body,toc=enhance(MD.render(text),relative_source,destination)
+        body,toc=enhance(render_markdown(text),relative_source,destination)
         title=next((line.lstrip('# ').strip() for line in text.splitlines() if line.startswith('# ')),source.stem)
         target=output/destination
         target.parent.mkdir(parents=True,exist_ok=True)
