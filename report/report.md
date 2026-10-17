@@ -140,8 +140,8 @@ $$
 $$
 \mathbf{X}
 =\left[
-\mathrm{Z}\{\mathrm{Winsor}(\ln(1+\mathbf{X}_{num}))\}
-\;\middle|\;
+\mathrm{Z}\lbrace \mathrm{Winsor}(\ln(1+\mathbf{X}_{num}))\rbrace
+\quad \middle|\quad
 \mathrm{OneHot}(\mathbf{X}_{cat})
 \right].
 \tag{4}
@@ -150,8 +150,8 @@ $$
 四类画像通过式（5）所示的类内平方距离目标获得：
 
 $$
-\min_{\{c_i\},\{\boldsymbol{\mu}_k\}}
-\sum_{i=1}^{n}\left\|\mathbf{x}_i-\boldsymbol{\mu}_{c_i}\right\|_2^2.
+\min_{\lbrace c_i\rbrace ,\lbrace \boldsymbol{\mu}_k\rbrace }
+\sum_{i=1}^{n}\left\lVert \mathbf{x}_i-\boldsymbol{\mu}_{c_i}\right\rVert _2^2.
 \tag{5}
 $$
 
