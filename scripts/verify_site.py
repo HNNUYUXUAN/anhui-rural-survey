@@ -34,6 +34,17 @@ def main() -> int:
     notebook=BeautifulSoup((root/'notebook/index.html').read_text(encoding='utf-8'),'html.parser')
     if len(report.select('.math.block')) != 5:problems.append('report_equation_count')
     if len(report.select('main img')) != 16:problems.append('report_figure_count')
+    for name, document, count in [('report', report, 7), ('notebook', notebook, 13)]:
+        tables = document.select('main table')
+        if len(tables) != count:problems.append(f'{name}_table_count')
+        for index, table in enumerate(tables, 1):
+            if not table.caption or not table.caption.get_text(strip=True):
+                problems.append(f'{name}_table_title_missing:{index}')
+            elif table.find(recursive=False).name != 'caption':
+                problems.append(f'{name}_table_title_position:{index}')
+    for index, figure in enumerate(report.select('main figure'), 1):
+        if not figure.figcaption or figure.find_all(recursive=False)[-1].name != 'figcaption':
+            problems.append(f'report_figure_caption_position:{index}')
     if len(notebook.select('.code-cell')) != 12:problems.append('notebook_code_count')
     if len(list((root/'assets/notebook').glob('*.svg'))) != 8:problems.append('notebook_vector_count')
     for svg in (root/'assets/notebook').glob('*.svg'):

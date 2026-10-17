@@ -73,6 +73,7 @@ def build_notebook(target: Path) -> Path:
             from matplotlib_inline.backend_inline import set_matplotlib_formats
             sys.path.insert(0, str(ROOT / "scripts"))
             from plot_style import configure, finish_figure
+            from table_style import show_table
             font_audit = configure()
             set_matplotlib_formats("svg", "png")
             print("绘图字体：" + " / ".join(font_audit["families"]))
@@ -117,7 +118,7 @@ def build_notebook(target: Path) -> Path:
                     )
 
             inventory_df = pd.DataFrame(inventory)
-            display(inventory_df)
+            show_table(inventory_df, "表1　公开数据文件清单")
             print(f"公开研究数据文件：{len(data_files)} 个")
             """
         ),
@@ -184,8 +185,8 @@ def build_notebook(target: Path) -> Path:
             """
             land_status = pd.read_csv(RESULT_DIR / "land-status-2025.csv")
             labor_groups = pd.read_csv(RESULT_DIR / "fallow-groups-2025.csv")
-            display(land_status.style.format({"percent": "{:.2f}%"}))
-            display(labor_groups.style.format({"fallow_percent": "{:.2f}%"}))
+            show_table(land_status, "表2　2025年土地经营状态", {"percent": "{:.2f}%"})
+            show_table(labor_groups, "表3　不同务农劳动力组的撂荒比例", {"fallow_percent": "{:.2f}%"})
 
             fig, axes = plt.subplots(1, 2, figsize=(13, 4.5))
             sns.barplot(data=land_status, x="percent", y="state", color="#555555", ax=axes[0])
@@ -209,15 +210,14 @@ def build_notebook(target: Path) -> Path:
             model_view["置信区间是否跨1"] = ~(
                 (model_view["ci_low_or"] > 1) | (model_view["ci_high_or"] < 1)
             )
-            display(
+            show_table(
                 model_view[
                     ["term", "odds_ratio", "ci_low_or", "ci_high_or", "bootstrap_sign_p", "n", "置信区间是否跨1"]
-                ].style.format(
+                ], "表4　2025年撂荒模型优势比与区间",
                     {
                         "odds_ratio": "{:.3f}", "ci_low_or": "{:.3f}",
                         "ci_high_or": "{:.3f}", "bootstrap_sign_p": "{:.4f}",
                     }
-                )
             )
 
             ordered = model_view.sort_values("odds_ratio")
@@ -264,7 +264,7 @@ def build_notebook(target: Path) -> Path:
         code(
             """
             sensitivity = pd.read_csv(RESULT_DIR / "sensitivity-2025.csv")
-            display(sensitivity.style.format({"fallow_percent": "{:.2f}%", "labor_or": "{:.3f}", "area_or": "{:.3f}", "disaster_or": "{:.3f}"}))
+            show_table(sensitivity, "表5　2025年敏感性检验", {"fallow_percent": "{:.2f}%", "labor_or": "{:.3f}", "area_or": "{:.3f}", "disaster_or": "{:.3f}"})
 
             sensitivity_long = sensitivity.melt(
                 id_vars=["scenario", "n"],
@@ -296,8 +296,8 @@ def build_notebook(target: Path) -> Path:
                 "profile", "n", "share_percent", "labor", "operated_area", "grain_area",
                 "fallow_percent", "managed_percent", "transfer_out_percent", "transfer_in_percent",
             ]
-            display(profiles[profile_columns].style.format({column: "{:.2f}" for column in profile_columns if column not in {"profile", "n"}}))
-            display(pd.Series(profile_meta, name="值").to_frame())
+            show_table(profiles[profile_columns], "表6　2025年经营画像规模与特征", {column: "{:.2f}%" if column == "fallow_percent" else "{:.2f}" for column in profile_columns if column not in {"profile", "n"}})
+            show_table(pd.Series(profile_meta, name="值").rename_axis("参数").reset_index(), "表7　画像模型参数与稳定性")
 
             fig, axes = plt.subplots(1, 2, figsize=(13, 4.8))
             sns.barplot(data=profiles, x="share_percent", y="profile", color="#555555", ax=axes[0])
@@ -328,7 +328,10 @@ def build_notebook(target: Path) -> Path:
             household = pd.read_csv(RESULT_DIR / "households-2026.csv")
             household["主口径复算"] = (household["success"] / household["n"] * 100).round(2)
             household["敏感性复算"] = (household["sensitivity_success"] / household["sensitivity_n"] * 100).round(2)
-            display(household.style.format({"percent": "{:.2f}%", "sensitivity_percent": "{:.2f}%", "主口径复算": "{:.2f}%", "敏感性复算": "{:.2f}%"}))
+            show_table(household[["label", "n", "success", "percent", "主口径复算", "denominator_rule"]],
+                       "表8　2026年农户端指标与主口径复算", {"percent": "{:.2f}%", "主口径复算": "{:.2f}%"})
+            show_table(household[["label", "sensitivity_n", "sensitivity_success", "sensitivity_percent", "敏感性复算"]],
+                       "表9　2026年农户端排除短时答卷后的复算", {"sensitivity_percent": "{:.2f}%", "敏感性复算": "{:.2f}%"})
 
             fig, ax = plt.subplots(figsize=(10, 7))
             plot_household = household.sort_values("percent")
@@ -349,7 +352,10 @@ def build_notebook(target: Path) -> Path:
             village = pd.read_csv(RESULT_DIR / "villages-2026.csv")
             village["主口径复算"] = (village["success"] / village["n"] * 100).round(2)
             village["敏感性复算"] = (village["sensitivity_success"] / village["sensitivity_n"] * 100).round(2)
-            display(village.style.format({"percent": "{:.2f}%", "sensitivity_percent": "{:.2f}%", "主口径复算": "{:.2f}%", "敏感性复算": "{:.2f}%"}))
+            show_table(village[["label", "n", "success", "percent", "主口径复算", "denominator_rule"]],
+                       "表10　2026年村级端指标与主口径复算", {"percent": "{:.2f}%", "主口径复算": "{:.2f}%"})
+            show_table(village[["label", "sensitivity_n", "sensitivity_success", "sensitivity_percent", "敏感性复算"]],
+                       "表11　2026年村级端排除短时答卷后的复算", {"sensitivity_percent": "{:.2f}%", "敏感性复算": "{:.2f}%"})
 
             fig, ax = plt.subplots(figsize=(10, 6))
             plot_village = village.sort_values("percent")
@@ -368,7 +374,7 @@ def build_notebook(target: Path) -> Path:
         code(
             """
             parallel = pd.read_csv(RESULT_DIR / "household-village-2026.csv")
-            display(parallel.style.format({"household_percent": "{:.2f}%", "village_percent": "{:.2f}%"}))
+            show_table(parallel, "表12　2026年农户与村级并列指标", {"household_percent": "{:.2f}%", "village_percent": "{:.2f}%"})
 
             parallel_long = pd.concat(
                 [
@@ -432,7 +438,7 @@ def build_notebook(target: Path) -> Path:
                 "直接标识检查通过": not risky_fields and not direct_value_hits,
             }
             checks_df = pd.Series(checks, name="通过").rename_axis("检查项").to_frame()
-            display(checks_df)
+            show_table(checks_df.reset_index(), "表13　数据一致性检查结果")
             assert all(checks.values()), checks
             print(f"一致性检查：{sum(checks.values())}/{len(checks)} 项通过")
             """

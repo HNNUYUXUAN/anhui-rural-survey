@@ -63,7 +63,25 @@ def enhance(body: str, source: str, destination: str) -> tuple[str, str]:
         heading["id"] = heading.get("id", identifier if not anchor else identifier+"-title")
         headings.append((identifier, heading.get_text(" ", strip=True)))
     for table in soup.find_all("table"):
+        previous = table.find_previous_sibling()
+        if previous and previous.name == "p" and re.match(r"表\d+", previous.get_text(strip=True)):
+            caption = soup.new_tag("caption")
+            caption.string = previous.get_text(strip=True)
+            table.insert(0, caption)
+            previous.decompose()
+        for row in table.select("tr"):
+            for cell in row.find_all(["th", "td"], recursive=False):
+                # Preserve Markdown's explicit numeric/text alignment.
+                alignment = cell.get("style", "")
+                if "right" in alignment:
+                    cell["class"] = cell.get("class", []) + ["numeric"]
+                if cell.name == "th":
+                    cell["scope"] = "col" if row.find_parent("thead") else "row"
+        column_count = max((len(row.find_all(["th", "td"], recursive=False)) for row in table.select("tr")), default=0)
+        table["class"] = table.get("class", []) + (["wide-table"] if column_count >= 6 else [])
         wrapper = soup.new_tag("div", attrs={"class": "table-scroll", "tabindex": "0", "role": "region", "aria-label": "数据表，可横向浏览"})
+        if table.caption:
+            wrapper["aria-label"] = table.caption.get_text(strip=True) + "，可横向浏览"
         table.wrap(wrapper)
     for paragraph in list(soup.find_all("p")):
         if paragraph.find("img") is None:

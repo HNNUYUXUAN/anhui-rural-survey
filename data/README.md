@@ -7,7 +7,7 @@
 ## 聚合分析结果
 
 | 文件 | 格式 |
-|---|---|
+|:---|:---:|
 | [2025年土地状态统计](results/land-status-2025.csv) | CSV |
 | [2025年撂荒分组统计](results/fallow-groups-2025.csv) | CSV |
 | [2025年撂荒模型结果](results/fallow-model-2025.csv) | CSV |
@@ -25,7 +25,7 @@
 ## 制图数据
 
 | 文件 | 格式 |
-|---|---|
+|:---|:---:|
 | [fig1-2_ah_urban_rural_income](charts/fig1-2_ah_urban_rural_income.csv) | CSV |
 | [fig4-1_land_status](charts/fig4-1_land_status.csv) | CSV |
 | [fig4-2_labor_fallow](charts/fig4-2_labor_fallow.csv) | CSV |

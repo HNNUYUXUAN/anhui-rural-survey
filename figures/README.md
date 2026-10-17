@@ -5,7 +5,7 @@
 ## 统计图
 
 | 图表 | PNG | SVG | 数据 |
-|---|---|---|---|
+|:---|:---:|:---:|:---:|
 | 图 1-2 安徽城乡居民人均可支配收入 | [查看](stats/fig1-2_ah_urban_rural_income.png) | [矢量图](stats/fig1-2_ah_urban_rural_income.svg) | [CSV](../data/charts/fig1-2_ah_urban_rural_income.csv) |
 | 图 4-1 土地状态 | [查看](stats/fig4-1_land_status.png) | [矢量图](stats/fig4-1_land_status.svg) | [CSV](../data/charts/fig4-1_land_status.csv) |
 | 图 4-2 劳动力与撂荒 | [查看](stats/fig4-2_labor_fallow.png) | [矢量图](stats/fig4-2_labor_fallow.svg) | [CSV](../data/charts/fig4-2_labor_fallow.csv) |
