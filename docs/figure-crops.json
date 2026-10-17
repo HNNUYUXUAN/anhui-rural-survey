@@ -1,0 +1,306 @@
+[
+  {
+    "path": "figures/diagrams/fig1-1_grain_continuity_mechanism.png",
+    "original_size": [
+      1536,
+      1024
+    ],
+    "crop_box": [
+      4,
+      137,
+      1532,
+      688
+    ],
+    "size": [
+      1528,
+      551
+    ],
+    "source_sha256": "30830aecba28c30eeff9775480f89288d7cea94daa52dca15d48a797b3d19845",
+    "sha256": "d4fdabc52534b5083f874c8323091fddc289fa5c23082230335ed5a02d0b45e1"
+  },
+  {
+    "path": "figures/diagrams/fig3-1_empirical_workflow.png",
+    "original_size": [
+      1774,
+      887
+    ],
+    "crop_box": [
+      18,
+      28,
+      1753,
+      783
+    ],
+    "size": [
+      1735,
+      755
+    ],
+    "source_sha256": "6535ded84fed4dccf21be5d24dd8fd1cc7bc09cfa5cd64eb3f7ead6165aeaa6e",
+    "sha256": "3b9af7dc191e6e2cad8cf0a4d18876439c623d71b49fdf51f4bc9097c1c443f5"
+  },
+  {
+    "path": "figures/diagrams/fig5-1_profile_classification.png",
+    "original_size": [
+      1536,
+      1024
+    ],
+    "crop_box": [
+      8,
+      57,
+      1518,
+      858
+    ],
+    "size": [
+      1510,
+      801
+    ],
+    "source_sha256": "c7f081bb1a8e9e198e16a1a9e44c41acb39e5e07569cc03475a852a1ea21d6a9",
+    "sha256": "2c91848e8fcf6fa297e986750f548297b0a511410e710f5e7580fb21f425c87a"
+  },
+  {
+    "path": "figures/diagrams/fig6-1_policy_transmission.png",
+    "original_size": [
+      1536,
+      1024
+    ],
+    "crop_box": [
+      48,
+      127,
+      1501,
+      684
+    ],
+    "size": [
+      1453,
+      557
+    ],
+    "source_sha256": "b586308c7cb46cb7c111c0e5cdbe23414961a77aa958603112513eacdd220bdc",
+    "sha256": "24f636944e3d582966605a82a33921eefc84fdbdc6801af1f00197de265c8fe4"
+  },
+  {
+    "path": "figures/diagrams/fig7-1_risk_recovery_loop.png",
+    "original_size": [
+      1536,
+      1024
+    ],
+    "crop_box": [
+      57,
+      32,
+      1477,
+      912
+    ],
+    "size": [
+      1420,
+      880
+    ],
+    "source_sha256": "689776fdae31e2422ce69ef47d880efac19f733734bb220165d6a65314de779f",
+    "sha256": "a1437c1830fa96e2892dffa3be0b99bdb004956d759891f46a72613aaa14dd21"
+  },
+  {
+    "path": "figures/stats/fig1-2_ah_urban_rural_income.png",
+    "original_size": [
+      3561,
+      2123
+    ],
+    "crop_box": [
+      6,
+      5,
+      3558,
+      2108
+    ],
+    "size": [
+      3552,
+      2103
+    ],
+    "source_sha256": "8f1bab348e9b06491bb08b1ad9e614c8dc019287cfb1c8a14e51ac875e3473f7",
+    "sha256": "c239cd0a4094029e8957e6306727cb5f86a4ed608b8e714a3500613fed03c49d"
+  },
+  {
+    "path": "figures/stats/fig4-1_land_status.png",
+    "original_size": [
+      3557,
+      2123
+    ],
+    "crop_box": [
+      9,
+      5,
+      3554,
+      2107
+    ],
+    "size": [
+      3545,
+      2102
+    ],
+    "source_sha256": "e0ee93bdf63161dc7770fd75a85bf18477cbe78142a0719ef497cbd0f499e44d",
+    "sha256": "d084c1c51a3dbd9e552cf8bda837a756fdbe1f552dfcda171db9f9baea5ce489"
+  },
+  {
+    "path": "figures/stats/fig4-2_labor_fallow.png",
+    "original_size": [
+      3558,
+      2124
+    ],
+    "crop_box": [
+      6,
+      5,
+      3548,
+      2108
+    ],
+    "size": [
+      3542,
+      2103
+    ],
+    "source_sha256": "c8a27b1e27f0f49ac89da48ed2928c011731ca5047861f81c6ab12b7294aea11",
+    "sha256": "0586a84ced79846f64452184da6615d007a7d1adb956a832b4a04dcaa54e5082"
+  },
+  {
+    "path": "figures/stats/fig4-3_logit_or.png",
+    "original_size": [
+      3651,
+      2195
+    ],
+    "crop_box": [
+      10,
+      3,
+      3644,
+      2181
+    ],
+    "size": [
+      3634,
+      2178
+    ],
+    "source_sha256": "db19eb2c8ed5c4f5ad18ff4aa8baff76633776719f97284d9977747b3eaab97e",
+    "sha256": "7c708650a4cf665dc8aa974a69361b5b24a0848edbc9b65838cde54a4162693d"
+  },
+  {
+    "path": "figures/stats/fig4-4_area_disaster_prediction.png",
+    "original_size": [
+      3562,
+      2123
+    ],
+    "crop_box": [
+      5,
+      5,
+      3559,
+      2107
+    ],
+    "size": [
+      3554,
+      2102
+    ],
+    "source_sha256": "664da3ff169319590f750127cfd3b1ed5090061a32d444e9028f05951cbde818",
+    "sha256": "9e2be468e863bd9f61d129badfc817800d9d6b7204c4fa5d4dd6646c2a891a68"
+  },
+  {
+    "path": "figures/stats/fig5-2_profile_heatmap.png",
+    "original_size": [
+      3549,
+      1977
+    ],
+    "crop_box": [
+      11,
+      7,
+      3532,
+      1951
+    ],
+    "size": [
+      3521,
+      1944
+    ],
+    "source_sha256": "236424ef30252a93a334356ac2223fb1a2b053be90bf8c401bd4bfa1ab7ad9f8",
+    "sha256": "6c3ef40ceedd2253f0fd07b111308f9d1fa934e7f6c73baaa888af682b49a9b9"
+  },
+  {
+    "path": "figures/stats/fig5-3_profile_metrics.png",
+    "original_size": [
+      3550,
+      2126
+    ],
+    "crop_box": [
+      10,
+      5,
+      3548,
+      2109
+    ],
+    "size": [
+      3538,
+      2104
+    ],
+    "source_sha256": "d418b4fa3706eaee0d554b667537fd094a6e53a101c6cf6f38c6940d8dbb06f1",
+    "sha256": "d70ce651d7b1898e4ff3407addcffdf182ba8f24425afd5965b4e8c7c1dafc62"
+  },
+  {
+    "path": "figures/stats/fig6-2_policy_future.png",
+    "original_size": [
+      3623,
+      2167
+    ],
+    "crop_box": [
+      10,
+      7,
+      3621,
+      2160
+    ],
+    "size": [
+      3611,
+      2153
+    ],
+    "source_sha256": "983ed127caf47abca5986a83af5c52da88a007d14d6eed00c7117e11deca42ac",
+    "sha256": "200253c46787c20b4dc659bdf6743e6343495be15f6ea4f7131df18c7e12f15c"
+  },
+  {
+    "path": "figures/stats/fig6-3_contract_service_constraints.png",
+    "original_size": [
+      3645,
+      2167
+    ],
+    "crop_box": [
+      8,
+      7,
+      3637,
+      2159
+    ],
+    "size": [
+      3629,
+      2152
+    ],
+    "source_sha256": "fb62311007fa8e5a1618e4937397f672df1b9d6a923b3b573f6ac4035ac3311e",
+    "sha256": "233ec2e536265d378d9d2a3151870f8f6136ab57bed49c24ec976566b8e2dcb6"
+  },
+  {
+    "path": "figures/stats/fig6-4_village_governance.png",
+    "original_size": [
+      3626,
+      2167
+    ],
+    "crop_box": [
+      9,
+      7,
+      3624,
+      2160
+    ],
+    "size": [
+      3615,
+      2153
+    ],
+    "source_sha256": "a71acc6ffbdb539ae77eb614c5ae2284d1e46eec37d19cd86b5b287162768d2d",
+    "sha256": "f3873dcf72765be81494cca017820690ed81996fd176f2bc98b4542d6d0a3958"
+  },
+  {
+    "path": "figures/stats/fig6-5_household_village_parallel.png",
+    "original_size": [
+      3613,
+      1987
+    ],
+    "crop_box": [
+      10,
+      10,
+      3608,
+      1977
+    ],
+    "size": [
+      3598,
+      1967
+    ],
+    "source_sha256": "ac9b2079b7ca545e5c2b30642da2836e9b83565be429bbb0e64311f4c96f3780",
+    "sha256": "690c912cd402c3454496da064c9f5c763e8f3473010019dbce6167e20a2679e9"
+  }
+]

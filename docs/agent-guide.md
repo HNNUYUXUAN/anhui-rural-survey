@@ -5,7 +5,7 @@
 1. [llms.txt](../llms.txt)：项目主题、核心入口和证据定位。
 2. [resource-catalog.json](resource-catalog.json)：逐资源的路径、类型、关键词、CSV 字段和记录数。
 3. [数据说明](../DATA.md)：样本、有效分母、粒度和可复现范围。
-4. [研究报告](../01_调研报告/README.md)：研究问题、方法、结果及局限。
+4. [研究报告](../report/README.md)：研究问题、方法、结果及局限。
 5. [使用指南](usage.md)：安装、执行和单个结果的核对示例。
 
 [llm.txt](../llm.txt)提供兼容入口，[llms-full.txt](../llms-full.txt)提供展开的材料导览。它们由脚本生成；这些文件为机器阅读提供导航，检索收录取决于使用方。

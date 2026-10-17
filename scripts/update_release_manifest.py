@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import csv
 import hashlib
+import json
 import subprocess
 from pathlib import Path
 
@@ -17,6 +18,11 @@ def main() -> int:
     names = sorted({name for name in tracked if name and name not in MANIFEST_NAMES})
     with (ROOT / "MANIFEST.csv").open(encoding="utf-8-sig", newline="") as stream:
         categories = {row["relative_path"]: row["category"] for row in csv.DictReader(stream)}
+    mapping_path = ROOT / "docs/path-map.json"
+    if mapping_path.is_file():
+        for old, new in json.loads(mapping_path.read_text(encoding="utf-8")).items():
+            if old in categories:
+                categories.setdefault(new, categories[old])
     rows = []
     for name in names:
         path = ROOT / name

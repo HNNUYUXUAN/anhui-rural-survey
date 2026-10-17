@@ -8,11 +8,11 @@
 ## 阅读入口
 
 - [项目首页](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/README.md)
-- [研究报告](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/01_%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/README.md)
-- [研究数据](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/README.md)
-- [图表与制图数据](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/README.md)
-- [参考文献](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/04_%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/README.md)
-- [调查工具](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/05_%E8%B0%83%E6%9F%A5%E5%B7%A5%E5%85%B7/README.md)
+- [研究报告](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/report/README.md)
+- [研究数据](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/README.md)
+- [图表与制图数据](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/README.md)
+- [参考文献](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/references/README.md)
+- [调查工具](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/surveys/README.md)
 - [Notebook](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/notebooks/README.md)
 - [数据口径](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/DATA.md)
 - [复现指南](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/docs/usage.md)
@@ -20,6 +20,11 @@
 - [机器资源目录](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/docs/resource-catalog.json)
 - [引用](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/CITATION.cff)
 - [许可证](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/LICENSE)
+
+## 在线阅读
+
+- [完整报告](https://hnnuyuxuan.github.io/anhui-rural-survey/report/)
+- [已执行 Notebook](https://hnnuyuxuan.github.io/anhui-rural-survey/notebook/)
 
 ## 证据与计算
 
@@ -33,100 +38,100 @@
 
 ### 研究报告
 
-- [把地种好，把日子过稳——稳定承包背景下安徽农户持续种粮的约束结构](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/01_%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/%E6%8A%8A%E5%9C%B0%E7%A7%8D%E5%A5%BD%EF%BC%8C%E6%8A%8A%E6%97%A5%E5%AD%90%E8%BF%87%E7%A8%B3%E2%80%94%E2%80%94%E7%A8%B3%E5%AE%9A%E6%89%BF%E5%8C%85%E8%83%8C%E6%99%AF%E4%B8%8B%E5%AE%89%E5%BE%BD%E5%86%9C%E6%88%B7%E6%8C%81%E7%BB%AD%E7%A7%8D%E7%B2%AE%E7%9A%84%E7%BA%A6%E6%9D%9F%E7%BB%93%E6%9E%84.md) · md
+- [把地种好，把日子过稳——稳定承包背景下安徽农户持续种粮的约束结构](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/report/report.md) · md
 
 ### 研究数据
 
-- [fig1-2_ah_urban_rural_income](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E5%9B%BE%E8%A1%A8%E6%95%B0%E6%8D%AE/fig1-2_ah_urban_rural_income.csv) · csv
+- [fig1-2_ah_urban_rural_income](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/charts/fig1-2_ah_urban_rural_income.csv) · csv
   字段：year、urban_yuan、rural_yuan；数据行：5。
-- [fig4-1_land_status](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E5%9B%BE%E8%A1%A8%E6%95%B0%E6%8D%AE/fig4-1_land_status.csv) · csv
+- [fig4-1_land_status](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/charts/fig4-1_land_status.csv) · csv
   字段：category、value、n；数据行：4。
-- [fig4-2_labor_fallow](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E5%9B%BE%E8%A1%A8%E6%95%B0%E6%8D%AE/fig4-2_labor_fallow.csv) · csv
+- [fig4-2_labor_fallow](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/charts/fig4-2_labor_fallow.csv) · csv
   字段：category、value、n；数据行：3。
-- [fig4-3_logit_or](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E5%9B%BE%E8%A1%A8%E6%95%B0%E6%8D%AE/fig4-3_logit_or.csv) · csv
+- [fig4-3_logit_or](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/charts/fig4-3_logit_or.csv) · csv
   字段：category、odds_ratio、ci_low_or、ci_high_or、n；数据行：6。
-- [fig4-4_area_disaster_prediction](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E5%9B%BE%E8%A1%A8%E6%95%B0%E6%8D%AE/fig4-4_area_disaster_prediction.csv) · csv
+- [fig4-4_area_disaster_prediction](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/charts/fig4-4_area_disaster_prediction.csv) · csv
   字段：category、operated_area_mu、value；数据行：160。
-- [fig5-2_profile_heatmap](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E5%9B%BE%E8%A1%A8%E6%95%B0%E6%8D%AE/fig5-2_profile_heatmap.csv) · csv
+- [fig5-2_profile_heatmap](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/charts/fig5-2_profile_heatmap.csv) · csv
   字段：cluster、labor、operated_area、grain_area、plot_count、agricultural_income、nonagricultural_income、profile；数据行：4。
-- [fig5-3_profile_metrics](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E5%9B%BE%E8%A1%A8%E6%95%B0%E6%8D%AE/fig5-3_profile_metrics.csv) · csv
+- [fig5-3_profile_metrics](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/charts/fig5-3_profile_metrics.csv) · csv
   字段：cluster、labor、operated_area、grain_area、plot_count、agricultural_income、nonagricultural_income、profile、largest_plot、managed_area、fallow_percent、managed_percent、transfer_out_percent、transfer_in_percent、n、share_percent；数据行：4。
-- [fig6-2_policy_future](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E5%9B%BE%E8%A1%A8%E6%95%B0%E6%8D%AE/fig6-2_policy_future.csv) · csv
+- [fig6-2_policy_future](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/charts/fig6-2_policy_future.csv) · csv
   字段：label、n、success、percent、denominator_rule、sensitivity_n、sensitivity_success、sensitivity_percent；数据行：6。
-- [fig6-3_contract_service_constraints](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E5%9B%BE%E8%A1%A8%E6%95%B0%E6%8D%AE/fig6-3_contract_service_constraints.csv) · csv
+- [fig6-3_contract_service_constraints](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/charts/fig6-3_contract_service_constraints.csv) · csv
   字段：label、n、success、percent、denominator_rule、sensitivity_n、sensitivity_success、sensitivity_percent；数据行：6。
-- [fig6-4_village_governance](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E5%9B%BE%E8%A1%A8%E6%95%B0%E6%8D%AE/fig6-4_village_governance.csv) · csv
+- [fig6-4_village_governance](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/charts/fig6-4_village_governance.csv) · csv
   字段：label、n、success、percent、denominator_rule、sensitivity_n、sensitivity_success、sensitivity_percent；数据行：6。
-- [fig6-5_household_village_parallel](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E5%9B%BE%E8%A1%A8%E6%95%B0%E6%8D%AE/fig6-5_household_village_parallel.csv) · csv
+- [fig6-5_household_village_parallel](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/charts/fig6-5_household_village_parallel.csv) · csv
   字段：theme、household_label、household_percent、household_n、village_label、village_percent、village_n；数据行：3。
-- [2025年土地状态统计](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2025%E5%B9%B4%E5%9C%9F%E5%9C%B0%E7%8A%B6%E6%80%81%E7%BB%9F%E8%AE%A1.csv) · csv
-  字段：state、n、percent；数据行：4。
-- [2025年撂荒分组统计](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2025%E5%B9%B4%E6%92%82%E8%8D%92%E5%88%86%E7%BB%84%E7%BB%9F%E8%AE%A1.csv) · csv
-  字段：group、n、fallow_percent；数据行：3。
-- [2025年撂荒模型结果](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2025%E5%B9%B4%E6%92%82%E8%8D%92%E6%A8%A1%E5%9E%8B%E7%BB%93%E6%9E%9C.csv) · csv
-  字段：term、coef_log_odds、odds_ratio、ci_low_or、ci_high_or、bootstrap_sign_p、n、bootstrap_replicates；数据行：7。
-- [2025年敏感性检验](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2025%E5%B9%B4%E6%95%8F%E6%84%9F%E6%80%A7%E6%A3%80%E9%AA%8C.csv) · csv
-  字段：scenario、n、fallow_percent、labor_or、area_or、disaster_or、status；数据行：5。
-- [2025年画像汇总](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2025%E5%B9%B4%E7%94%BB%E5%83%8F%E6%B1%87%E6%80%BB.csv) · csv
-  字段：cluster、labor、operated_area、grain_area、plot_count、largest_plot、agricultural_income、nonagricultural_income、managed_area、fallow_percent、managed_percent、transfer_out_percent、transfer_in_percent、n、share_percent、profile；数据行：4。
-- [2025年画像特征热图数据](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2025%E5%B9%B4%E7%94%BB%E5%83%8F%E7%89%B9%E5%BE%81%E7%83%AD%E5%9B%BE%E6%95%B0%E6%8D%AE.csv) · csv
-  字段：cluster、labor、operated_area、grain_area、plot_count、agricultural_income、nonagricultural_income、profile；数据行：4。
-- [2025年画像聚类元数据](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2025%E5%B9%B4%E7%94%BB%E5%83%8F%E8%81%9A%E7%B1%BB%E5%85%83%E6%95%B0%E6%8D%AE.json) · json
-- [2025年连续结果模型](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2025%E5%B9%B4%E8%BF%9E%E7%BB%AD%E7%BB%93%E6%9E%9C%E6%A8%A1%E5%9E%8B.csv) · csv
+- [2025年画像聚类元数据](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/results/cluster-metadata-2025.json) · json
+- [2025年连续结果模型](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/results/continuous-models-2025.csv) · csv
   字段：outcome、predictor、standardized_coef、ci_low、ci_high、n、bootstrap_replicates；数据行：10。
-- [2025年预测情景网格](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2025%E5%B9%B4%E9%A2%84%E6%B5%8B%E6%83%85%E6%99%AF%E7%BD%91%E6%A0%BC.csv) · csv
-  字段：operated_area_mu、disaster、predicted_fallow_percent；数据行：160。
-- [2026年农户指标](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2026%E5%B9%B4%E5%86%9C%E6%88%B7%E6%8C%87%E6%A0%87.csv) · csv
-  字段：label、n、success、percent、denominator_rule、sensitivity_n、sensitivity_success、sensitivity_percent；数据行：16。
-- [2026年户村并列指标](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2026%E5%B9%B4%E6%88%B7%E6%9D%91%E5%B9%B6%E5%88%97%E6%8C%87%E6%A0%87.csv) · csv
+- [2025年撂荒分组统计](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/results/fallow-groups-2025.csv) · csv
+  字段：group、n、fallow_percent；数据行：3。
+- [2025年撂荒模型结果](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/results/fallow-model-2025.csv) · csv
+  字段：term、coef_log_odds、odds_ratio、ci_low_or、ci_high_or、bootstrap_sign_p、n、bootstrap_replicates；数据行：7。
+- [2026年户村并列指标](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/results/household-village-2026.csv) · csv
   字段：theme、household_label、household_percent、household_n、village_label、village_percent、village_n；数据行：3。
-- [2026年村级指标](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2026%E5%B9%B4%E6%9D%91%E7%BA%A7%E6%8C%87%E6%A0%87.csv) · csv
+- [2026年农户指标](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/results/households-2026.csv) · csv
+  字段：label、n、success、percent、denominator_rule、sensitivity_n、sensitivity_success、sensitivity_percent；数据行：16。
+- [2025年土地状态统计](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/results/land-status-2025.csv) · csv
+  字段：state、n、percent；数据行：4。
+- [2025年预测情景网格](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/results/predictions-2025.csv) · csv
+  字段：operated_area_mu、disaster、predicted_fallow_percent；数据行：160。
+- [2025年画像特征热图数据](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/results/profile-features-2025.csv) · csv
+  字段：cluster、labor、operated_area、grain_area、plot_count、agricultural_income、nonagricultural_income、profile；数据行：4。
+- [2025年画像汇总](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/results/profiles-2025.csv) · csv
+  字段：cluster、labor、operated_area、grain_area、plot_count、largest_plot、agricultural_income、nonagricultural_income、managed_area、fallow_percent、managed_percent、transfer_out_percent、transfer_in_percent、n、share_percent、profile；数据行：4。
+- [2026年质量口径](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/results/quality-2026.json) · json
+- [2025年敏感性检验](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/results/sensitivity-2025.csv) · csv
+  字段：scenario、n、fallow_percent、labor_or、area_or、disaster_or、status；数据行：5。
+- [2026年村级指标](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/results/villages-2026.csv) · csv
   字段：label、n、success、percent、denominator_rule、sensitivity_n、sensitivity_success、sensitivity_percent；数据行：10。
-- [2026年质量口径](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2026%E5%B9%B4%E8%B4%A8%E9%87%8F%E5%8F%A3%E5%BE%84.json) · json
 
 ### 图表
 
-- [fig1-2_ah_urban_rural_income](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig1-2_ah_urban_rural_income.png) · png
-- [fig1-2_ah_urban_rural_income](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig1-2_ah_urban_rural_income.svg) · svg
-- [fig4-1_land_status](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig4-1_land_status.png) · png
-- [fig4-1_land_status](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig4-1_land_status.svg) · svg
-- [fig4-2_labor_fallow](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig4-2_labor_fallow.png) · png
-- [fig4-2_labor_fallow](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig4-2_labor_fallow.svg) · svg
-- [fig4-3_logit_or](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig4-3_logit_or.png) · png
-- [fig4-3_logit_or](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig4-3_logit_or.svg) · svg
-- [fig4-4_area_disaster_prediction](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig4-4_area_disaster_prediction.png) · png
-- [fig4-4_area_disaster_prediction](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig4-4_area_disaster_prediction.svg) · svg
-- [fig5-2_profile_heatmap](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig5-2_profile_heatmap.png) · png
-- [fig5-2_profile_heatmap](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig5-2_profile_heatmap.svg) · svg
-- [fig5-3_profile_metrics](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig5-3_profile_metrics.png) · png
-- [fig5-3_profile_metrics](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig5-3_profile_metrics.svg) · svg
-- [fig6-2_policy_future](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig6-2_policy_future.png) · png
-- [fig6-2_policy_future](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig6-2_policy_future.svg) · svg
-- [fig6-3_contract_service_constraints](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig6-3_contract_service_constraints.png) · png
-- [fig6-3_contract_service_constraints](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig6-3_contract_service_constraints.svg) · svg
-- [fig6-4_village_governance](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig6-4_village_governance.png) · png
-- [fig6-4_village_governance](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig6-4_village_governance.svg) · svg
-- [fig6-5_household_village_parallel](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig6-5_household_village_parallel.png) · png
-- [fig6-5_household_village_parallel](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig6-5_household_village_parallel.svg) · svg
-- [fig1-1_grain_continuity_mechanism](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/02_%E9%80%BB%E8%BE%91%E5%9B%BE/fig1-1_grain_continuity_mechanism.png) · png
-- [fig3-1_empirical_workflow](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/02_%E9%80%BB%E8%BE%91%E5%9B%BE/fig3-1_empirical_workflow.png) · png
-- [fig5-1_profile_classification](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/02_%E9%80%BB%E8%BE%91%E5%9B%BE/fig5-1_profile_classification.png) · png
-- [fig6-1_policy_transmission](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/02_%E9%80%BB%E8%BE%91%E5%9B%BE/fig6-1_policy_transmission.png) · png
-- [fig7-1_risk_recovery_loop](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/02_%E9%80%BB%E8%BE%91%E5%9B%BE/fig7-1_risk_recovery_loop.png) · png
+- [fig1-1_grain_continuity_mechanism](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/diagrams/fig1-1_grain_continuity_mechanism.png) · png
+- [fig3-1_empirical_workflow](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/diagrams/fig3-1_empirical_workflow.png) · png
+- [fig5-1_profile_classification](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/diagrams/fig5-1_profile_classification.png) · png
+- [fig6-1_policy_transmission](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/diagrams/fig6-1_policy_transmission.png) · png
+- [fig7-1_risk_recovery_loop](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/diagrams/fig7-1_risk_recovery_loop.png) · png
+- [fig1-2_ah_urban_rural_income](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/stats/fig1-2_ah_urban_rural_income.png) · png
+- [fig1-2_ah_urban_rural_income](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/stats/fig1-2_ah_urban_rural_income.svg) · svg
+- [fig4-1_land_status](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/stats/fig4-1_land_status.png) · png
+- [fig4-1_land_status](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/stats/fig4-1_land_status.svg) · svg
+- [fig4-2_labor_fallow](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/stats/fig4-2_labor_fallow.png) · png
+- [fig4-2_labor_fallow](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/stats/fig4-2_labor_fallow.svg) · svg
+- [fig4-3_logit_or](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/stats/fig4-3_logit_or.png) · png
+- [fig4-3_logit_or](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/stats/fig4-3_logit_or.svg) · svg
+- [fig4-4_area_disaster_prediction](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/stats/fig4-4_area_disaster_prediction.png) · png
+- [fig4-4_area_disaster_prediction](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/stats/fig4-4_area_disaster_prediction.svg) · svg
+- [fig5-2_profile_heatmap](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/stats/fig5-2_profile_heatmap.png) · png
+- [fig5-2_profile_heatmap](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/stats/fig5-2_profile_heatmap.svg) · svg
+- [fig5-3_profile_metrics](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/stats/fig5-3_profile_metrics.png) · png
+- [fig5-3_profile_metrics](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/stats/fig5-3_profile_metrics.svg) · svg
+- [fig6-2_policy_future](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/stats/fig6-2_policy_future.png) · png
+- [fig6-2_policy_future](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/stats/fig6-2_policy_future.svg) · svg
+- [fig6-3_contract_service_constraints](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/stats/fig6-3_contract_service_constraints.png) · png
+- [fig6-3_contract_service_constraints](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/stats/fig6-3_contract_service_constraints.svg) · svg
+- [fig6-4_village_governance](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/stats/fig6-4_village_governance.png) · png
+- [fig6-4_village_governance](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/stats/fig6-4_village_governance.svg) · svg
+- [fig6-5_household_village_parallel](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/stats/fig6-5_household_village_parallel.png) · png
+- [fig6-5_household_village_parallel](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/stats/fig6-5_household_village_parallel.svg) · svg
 
 ### 参考文献
 
-- [参考文献_按正文引用顺序](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/04_%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE_%E6%8C%89%E6%AD%A3%E6%96%87%E5%BC%95%E7%94%A8%E9%A1%BA%E5%BA%8F.md) · md
-- [参考文献来源登记](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/04_%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E6%9D%A5%E6%BA%90%E7%99%BB%E8%AE%B0.csv) · csv
+- [参考文献_按正文引用顺序](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/references/bibliography.md) · md
+- [参考文献来源登记](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/references/sources.csv) · csv
   字段：citation_number、citation；数据行：21。
 
 ### 调查工具
 
-- [稳定土地承包关系与粮食生产经营提质增效调查问卷——农户调查问卷](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/05_%E8%B0%83%E6%9F%A5%E5%B7%A5%E5%85%B7/%E7%A8%B3%E5%AE%9A%E5%9C%9F%E5%9C%B0%E6%89%BF%E5%8C%85%E5%85%B3%E7%B3%BB%E4%B8%8E%E7%B2%AE%E9%A3%9F%E7%94%9F%E4%BA%A7%E7%BB%8F%E8%90%A5%E6%8F%90%E8%B4%A8%E5%A2%9E%E6%95%88%E8%B0%83%E6%9F%A5%E9%97%AE%E5%8D%B7%E2%80%94%E2%80%94%E5%86%9C%E6%88%B7%E8%B0%83%E6%9F%A5%E9%97%AE%E5%8D%B7.docx) · docx
-- [稳定土地承包关系与粮食生产经营提质增效调查问卷——农户调查问卷](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/05_%E8%B0%83%E6%9F%A5%E5%B7%A5%E5%85%B7/%E7%A8%B3%E5%AE%9A%E5%9C%9F%E5%9C%B0%E6%89%BF%E5%8C%85%E5%85%B3%E7%B3%BB%E4%B8%8E%E7%B2%AE%E9%A3%9F%E7%94%9F%E4%BA%A7%E7%BB%8F%E8%90%A5%E6%8F%90%E8%B4%A8%E5%A2%9E%E6%95%88%E8%B0%83%E6%9F%A5%E9%97%AE%E5%8D%B7%E2%80%94%E2%80%94%E5%86%9C%E6%88%B7%E8%B0%83%E6%9F%A5%E9%97%AE%E5%8D%B7.txt) · txt
-- [稳定土地承包关系与粮食生产经营提质增效调查问卷——村干部调查问卷](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/05_%E8%B0%83%E6%9F%A5%E5%B7%A5%E5%85%B7/%E7%A8%B3%E5%AE%9A%E5%9C%9F%E5%9C%B0%E6%89%BF%E5%8C%85%E5%85%B3%E7%B3%BB%E4%B8%8E%E7%B2%AE%E9%A3%9F%E7%94%9F%E4%BA%A7%E7%BB%8F%E8%90%A5%E6%8F%90%E8%B4%A8%E5%A2%9E%E6%95%88%E8%B0%83%E6%9F%A5%E9%97%AE%E5%8D%B7%E2%80%94%E2%80%94%E6%9D%91%E5%B9%B2%E9%83%A8%E8%B0%83%E6%9F%A5%E9%97%AE%E5%8D%B7.docx) · docx
-- [稳定土地承包关系与粮食生产经营提质增效调查问卷——村干部调查问卷](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/05_%E8%B0%83%E6%9F%A5%E5%B7%A5%E5%85%B7/%E7%A8%B3%E5%AE%9A%E5%9C%9F%E5%9C%B0%E6%89%BF%E5%8C%85%E5%85%B3%E7%B3%BB%E4%B8%8E%E7%B2%AE%E9%A3%9F%E7%94%9F%E4%BA%A7%E7%BB%8F%E8%90%A5%E6%8F%90%E8%B4%A8%E5%A2%9E%E6%95%88%E8%B0%83%E6%9F%A5%E9%97%AE%E5%8D%B7%E2%80%94%E2%80%94%E6%9D%91%E5%B9%B2%E9%83%A8%E8%B0%83%E6%9F%A5%E9%97%AE%E5%8D%B7.txt) · txt
+- [稳定土地承包关系与粮食生产经营提质增效调查问卷——农户调查问卷](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/surveys/household.docx) · docx
+- [稳定土地承包关系与粮食生产经营提质增效调查问卷——农户调查问卷](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/surveys/household.txt) · txt
+- [稳定土地承包关系与粮食生产经营提质增效调查问卷——村干部调查问卷](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/surveys/village.docx) · docx
+- [稳定土地承包关系与粮食生产经营提质增效调查问卷——村干部调查问卷](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/surveys/village.txt) · txt
 
 ### 分析 Notebook
 
-- [安徽农户持续种粮调研_公开数据分析与结果复核](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/notebooks/%E5%AE%89%E5%BE%BD%E5%86%9C%E6%88%B7%E6%8C%81%E7%BB%AD%E7%A7%8D%E7%B2%AE%E8%B0%83%E7%A0%94_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B8%8E%E7%BB%93%E6%9E%9C%E5%A4%8D%E6%A0%B8.ipynb) · ipynb
+- [安徽农户持续种粮调研_公开数据分析与结果复核](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/notebooks/analysis.ipynb) · ipynb

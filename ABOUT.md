@@ -16,10 +16,10 @@
 
 | 材料 | 用途 |
 |---|---|
-| [研究报告](01_调研报告/README.md) | 理解研究问题、方法、结论及局限 |
-| [聚合结果与制图数据](02_公开数据/README.md) | 核对数字、有效分母与图表 |
+| [研究报告](report/README.md) | 理解研究问题、方法、结论及局限 |
+| [聚合结果与制图数据](data/README.md) | 核对数字、有效分母与图表 |
 | [分析 Notebook](notebooks/README.md) | 执行公开结果复核与可视化 |
-| [调查工具](05_调查工具/README.md) | 理解题项设计，开展问卷改编 |
-| [参考文献](04_参考文献/README.md) | 追溯学术与政策来源 |
+| [调查工具](surveys/README.md) | 理解题项设计，开展问卷改编 |
+| [参考文献](references/README.md) | 追溯学术与政策来源 |
 
 数据粒度、题项口径和可复现范围见 [DATA.md](DATA.md)。研究内容的引用方式见 [CITATION.md](CITATION.md)，许可范围见 [LICENSE](LICENSE)。

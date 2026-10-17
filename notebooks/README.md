@@ -1,8 +1,8 @@
 # 公开数据分析与结果复核
 
-[打开已执行 Notebook](安徽农户持续种粮调研_公开数据分析与结果复核.ipynb) · [安装与运行指南](../docs/usage.md)
+[在线阅读](https://hnnuyuxuan.github.io/anhui-rural-survey/notebook/) · [下载已执行 Notebook](analysis.ipynb) · [安装与运行指南](../docs/usage.md)
 
-Notebook 围绕“读取数据 → 核对比例与模型输出 → 重绘图表 → 检查一致性”展开，包含完整说明、代码和已保存的输出。输入来自[研究数据](../02_公开数据/README.md)中的 24 个 CSV/JSON。
+Notebook 围绕“读取数据 → 核对比例与模型输出 → 重绘图表 → 检查一致性”展开，包含完整说明、代码和已保存的输出。输入来自[研究数据](../data/README.md)中的 24 个 CSV/JSON。
 
 ## 运行
 
@@ -26,4 +26,4 @@ conda run -n anhuirural-survey python scripts/build_analysis_notebook.py --execu
 
 个体层模型重估需要原始分析输入。公开聚合结果支持的复核范围及研究解释见 [DATA.md](../DATA.md)。
 
-[研究报告](../01_调研报告/README.md) · [图表索引](../03_图表/README.md) · [返回首页](../README.md)
+[研究报告](../report/README.md) · [图表索引](../figures/README.md) · [返回首页](../README.md)

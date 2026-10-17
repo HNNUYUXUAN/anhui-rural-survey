@@ -12,7 +12,7 @@ import nbformat as nbf
 from nbconvert.preprocessors import ExecutePreprocessor
 
 
-NOTEBOOK_NAME = "安徽农户持续种粮调研_公开数据分析与结果复核.ipynb"
+NOTEBOOK_NAME = "analysis.ipynb"
 
 
 def markdown(text: str):
@@ -40,7 +40,7 @@ def build_notebook(target: Path) -> Path:
             """
             ## 1. 运行环境与数据路径
 
-            Notebook 可从仓库根目录或 `notebooks/` 目录执行。所有输入均来自 `02_公开数据/`，不会读取公开仓库之外的文件。
+            Notebook 可从仓库根目录或 `notebooks/` 目录执行。所有输入均来自 `data/`，不会读取公开仓库之外的文件。
             """
         ),
         code(
@@ -59,22 +59,23 @@ def build_notebook(target: Path) -> Path:
 
             candidates = [Path.cwd(), Path.cwd().parent, Path.cwd() / "public-release"]
             ROOT = next(
-                (path.resolve() for path in candidates if (path / "02_公开数据").is_dir()),
+                (path.resolve() for path in candidates if (path / "data").is_dir()),
                 None,
             )
             if ROOT is None:
-                raise FileNotFoundError("未找到公开仓库根目录及 02_公开数据 目录。")
+                raise FileNotFoundError("未找到公开仓库根目录及 data 目录。")
 
-            DATA_ROOT = ROOT / "02_公开数据"
-            RESULT_DIR = DATA_ROOT / "聚合分析结果"
-            FIGURE_DATA_DIR = DATA_ROOT / "图表数据"
+            DATA_ROOT = ROOT / "data"
+            RESULT_DIR = DATA_ROOT / "results"
+            FIGURE_DATA_DIR = DATA_ROOT / "charts"
 
-            sns.set_theme(style="whitegrid", context="notebook")
-            plt.rcParams["font.sans-serif"] = [
-                "Noto Sans CJK SC", "Microsoft YaHei", "SimHei",
-                "Arial Unicode MS", "DejaVu Sans"
-            ]
-            plt.rcParams["axes.unicode_minus"] = False
+            import sys
+            from matplotlib_inline.backend_inline import set_matplotlib_formats
+            sys.path.insert(0, str(ROOT / "scripts"))
+            from plot_style import configure, finish_figure
+            font_audit = configure()
+            set_matplotlib_formats("svg", "png")
+            print("绘图字体：" + " / ".join(font_audit["families"]))
             np.random.seed(20260914)
 
             print("公开仓库根目录：已定位")
@@ -181,18 +182,17 @@ def build_notebook(target: Path) -> Path:
         ),
         code(
             """
-            land_status = pd.read_csv(RESULT_DIR / "2025年土地状态统计.csv")
-            labor_groups = pd.read_csv(RESULT_DIR / "2025年撂荒分组统计.csv")
+            land_status = pd.read_csv(RESULT_DIR / "land-status-2025.csv")
+            labor_groups = pd.read_csv(RESULT_DIR / "fallow-groups-2025.csv")
             display(land_status.style.format({"percent": "{:.2f}%"}))
             display(labor_groups.style.format({"fallow_percent": "{:.2f}%"}))
 
             fig, axes = plt.subplots(1, 2, figsize=(13, 4.5))
-            sns.barplot(data=land_status, x="percent", y="state", color="#2A6F97", ax=axes[0])
+            sns.barplot(data=land_status, x="percent", y="state", color="#555555", ax=axes[0])
             axes[0].set(title="2025年土地经营状态", xlabel="比例（%）", ylabel="")
-            sns.barplot(data=labor_groups, x="group", y="fallow_percent", color="#61A5C2", ax=axes[1])
+            sns.barplot(data=labor_groups, x="group", y="fallow_percent", color="#555555", ax=axes[1])
             axes[1].set(title="不同家庭务农劳动力组的撂荒比例", xlabel="家庭务农劳动力", ylabel="撂荒比例（%）")
-            plt.tight_layout()
-            plt.show()
+            finish_figure(fig)
             """
         ),
         markdown(
@@ -204,7 +204,7 @@ def build_notebook(target: Path) -> Path:
         ),
         code(
             """
-            fallow_model = pd.read_csv(RESULT_DIR / "2025年撂荒模型结果.csv")
+            fallow_model = pd.read_csv(RESULT_DIR / "fallow-model-2025.csv")
             model_view = fallow_model.loc[fallow_model["term"] != "截距"].copy()
             model_view["置信区间是否跨1"] = ~(
                 (model_view["ci_low_or"] > 1) | (model_view["ci_high_or"] < 1)
@@ -226,12 +226,11 @@ def build_notebook(target: Path) -> Path:
             ax.errorbar(
                 ordered["odds_ratio"], y,
                 xerr=[ordered["odds_ratio"] - ordered["ci_low_or"], ordered["ci_high_or"] - ordered["odds_ratio"]],
-                fmt="o", color="#014F86", ecolor="#61A5C2", capsize=4,
+                fmt="o", markerfacecolor="white", color="#555555", ecolor="#555555", capsize=4,
             )
-            ax.axvline(1, color="#8D99AE", linestyle="--", linewidth=1)
+            ax.axvline(1, color="#999999", linestyle="--", linewidth=1)
             ax.set(yticks=y, yticklabels=ordered["term"], xlabel="优势比 OR（95%置信区间）", title="2025年撂荒模型森林图")
-            plt.tight_layout()
-            plt.show()
+            finish_figure(fig)
             """
         ),
         markdown(
@@ -243,17 +242,16 @@ def build_notebook(target: Path) -> Path:
         ),
         code(
             """
-            prediction = pd.read_csv(RESULT_DIR / "2025年预测情景网格.csv")
+            prediction = pd.read_csv(RESULT_DIR / "predictions-2025.csv")
             fig, ax = plt.subplots(figsize=(9, 5))
             sns.lineplot(
                 data=prediction,
                 x="operated_area_mu", y="predicted_fallow_percent",
-                hue="disaster", linewidth=2.3, ax=ax,
+                hue="disaster", style="disaster", linewidth=1.3, ax=ax,
             )
             ax.set(xlabel="经营面积（亩）", ylabel="预测撂荒比例（%）", title="经营面积与受灾情景下的预测撂荒比例")
             ax.legend(title="受灾情景")
-            plt.tight_layout()
-            plt.show()
+            finish_figure(fig)
             """
         ),
         markdown(
@@ -265,7 +263,7 @@ def build_notebook(target: Path) -> Path:
         ),
         code(
             """
-            sensitivity = pd.read_csv(RESULT_DIR / "2025年敏感性检验.csv")
+            sensitivity = pd.read_csv(RESULT_DIR / "sensitivity-2025.csv")
             display(sensitivity.style.format({"fallow_percent": "{:.2f}%", "labor_or": "{:.3f}", "area_or": "{:.3f}", "disaster_or": "{:.3f}"}))
 
             sensitivity_long = sensitivity.melt(
@@ -276,11 +274,11 @@ def build_notebook(target: Path) -> Path:
             label_map = {"labor_or": "务农劳动力", "area_or": "经营面积", "disaster_or": "受灾"}
             sensitivity_long["指标"] = sensitivity_long["指标"].map(label_map)
             fig, ax = plt.subplots(figsize=(11, 5))
-            sns.pointplot(data=sensitivity_long, x="OR", y="scenario", hue="指标", dodge=0.35, ax=ax)
-            ax.axvline(1, color="#8D99AE", linestyle="--", linewidth=1)
+            sns.pointplot(data=sensitivity_long, x="OR", y="scenario", hue="指标", dodge=0.35,
+                          markers=["o", "s", "^"], linestyles=["-", "--", ":"], ax=ax)
+            ax.axvline(1, color="#999999", linestyle="--", linewidth=1)
             ax.set(xlabel="优势比 OR", ylabel="", title="不同敏感性口径的关键优势比")
-            plt.tight_layout()
-            plt.show()
+            finish_figure(fig)
             """
         ),
         markdown(
@@ -292,8 +290,8 @@ def build_notebook(target: Path) -> Path:
         ),
         code(
             """
-            profiles = pd.read_csv(RESULT_DIR / "2025年画像汇总.csv")
-            profile_meta = json.loads((RESULT_DIR / "2025年画像聚类元数据.json").read_text(encoding="utf-8"))
+            profiles = pd.read_csv(RESULT_DIR / "profiles-2025.csv")
+            profile_meta = json.loads((RESULT_DIR / "cluster-metadata-2025.json").read_text(encoding="utf-8"))
             profile_columns = [
                 "profile", "n", "share_percent", "labor", "operated_area", "grain_area",
                 "fallow_percent", "managed_percent", "transfer_out_percent", "transfer_in_percent",
@@ -302,7 +300,7 @@ def build_notebook(target: Path) -> Path:
             display(pd.Series(profile_meta, name="值").to_frame())
 
             fig, axes = plt.subplots(1, 2, figsize=(13, 4.8))
-            sns.barplot(data=profiles, x="share_percent", y="profile", color="#2C7DA0", ax=axes[0])
+            sns.barplot(data=profiles, x="share_percent", y="profile", color="#555555", ax=axes[0])
             axes[0].set(title="四类经营画像的样本占比", xlabel="占比（%）", ylabel="")
             profile_rates = profiles.melt(
                 id_vars="profile", value_vars=["fallow_percent", "managed_percent", "transfer_out_percent", "transfer_in_percent"],
@@ -315,8 +313,7 @@ def build_notebook(target: Path) -> Path:
             profile_rates["指标"] = profile_rates["指标"].map(rate_names)
             sns.barplot(data=profile_rates, x="比例", y="profile", hue="指标", ax=axes[1])
             axes[1].set(title="不同画像的土地经营特征", xlabel="比例（%）", ylabel="")
-            plt.tight_layout()
-            plt.show()
+            finish_figure(fig)
             """
         ),
         markdown(
@@ -328,17 +325,16 @@ def build_notebook(target: Path) -> Path:
         ),
         code(
             """
-            household = pd.read_csv(RESULT_DIR / "2026年农户指标.csv")
+            household = pd.read_csv(RESULT_DIR / "households-2026.csv")
             household["主口径复算"] = (household["success"] / household["n"] * 100).round(2)
             household["敏感性复算"] = (household["sensitivity_success"] / household["sensitivity_n"] * 100).round(2)
             display(household.style.format({"percent": "{:.2f}%", "sensitivity_percent": "{:.2f}%", "主口径复算": "{:.2f}%", "敏感性复算": "{:.2f}%"}))
 
             fig, ax = plt.subplots(figsize=(10, 7))
             plot_household = household.sort_values("percent")
-            sns.barplot(data=plot_household, x="percent", y="label", color="#468FAF", ax=ax)
+            sns.barplot(data=plot_household, x="percent", y="label", color="#555555", ax=ax)
             ax.set(title="2026年农户端公开指标", xlabel="比例（%）", ylabel="")
-            plt.tight_layout()
-            plt.show()
+            finish_figure(fig)
             """
         ),
         markdown(
@@ -350,17 +346,16 @@ def build_notebook(target: Path) -> Path:
         ),
         code(
             """
-            village = pd.read_csv(RESULT_DIR / "2026年村级指标.csv")
+            village = pd.read_csv(RESULT_DIR / "villages-2026.csv")
             village["主口径复算"] = (village["success"] / village["n"] * 100).round(2)
             village["敏感性复算"] = (village["sensitivity_success"] / village["sensitivity_n"] * 100).round(2)
             display(village.style.format({"percent": "{:.2f}%", "sensitivity_percent": "{:.2f}%", "主口径复算": "{:.2f}%", "敏感性复算": "{:.2f}%"}))
 
             fig, ax = plt.subplots(figsize=(10, 6))
             plot_village = village.sort_values("percent")
-            sns.barplot(data=plot_village, x="percent", y="label", color="#89C2D9", ax=ax)
+            sns.barplot(data=plot_village, x="percent", y="label", color="#555555", ax=ax)
             ax.set(title="2026年村级公开指标", xlabel="比例（%）", ylabel="")
-            plt.tight_layout()
-            plt.show()
+            finish_figure(fig)
             """
         ),
         markdown(
@@ -372,7 +367,7 @@ def build_notebook(target: Path) -> Path:
         ),
         code(
             """
-            parallel = pd.read_csv(RESULT_DIR / "2026年户村并列指标.csv")
+            parallel = pd.read_csv(RESULT_DIR / "household-village-2026.csv")
             display(parallel.style.format({"household_percent": "{:.2f}%", "village_percent": "{:.2f}%"}))
 
             parallel_long = pd.concat(
@@ -385,8 +380,7 @@ def build_notebook(target: Path) -> Path:
             fig, ax = plt.subplots(figsize=(9, 4.8))
             sns.barplot(data=parallel_long, x="theme", y="比例", hue="层级", ax=ax)
             ax.set(title="2026年农户端与村级端并列指标", xlabel="主题", ylabel="比例（%）")
-            plt.tight_layout()
-            plt.show()
+            finish_figure(fig)
             """
         ),
         markdown(
@@ -458,6 +452,8 @@ def build_notebook(target: Path) -> Path:
         ),
     ]
 
+    for index, cell in enumerate(cells):
+        cell["id"] = f"cell-{index:02d}"
     notebook = nbf.v4.new_notebook(
         cells=cells,
         metadata={
@@ -515,7 +511,7 @@ def execute_notebook(path: Path) -> Path:
         try:
             executor = ExecutePreprocessor(timeout=600, kernel_name=kernel_name)
             executor.preprocess(
-                notebook, {"metadata": {"path": str(path.resolve().parents[1])}}
+                notebook, {"metadata": {"path": str(Path(__file__).resolve().parents[1])}}
             )
         finally:
             if previous_jupyter_path is None:
@@ -530,6 +526,12 @@ def execute_notebook(path: Path) -> Path:
             data = output.get("data", {})
             if "text/html" in data:
                 data.pop("text/plain", None)
+    notebook.metadata["plot_style"] = {
+        "mode": os.environ.get("SURVEY_FONT_MODE", "publication"),
+        "chinese": "Noto Serif CJK JP" if os.environ.get("SURVEY_FONT_MODE") == "portable" else "SimSun",
+        "latin": "Liberation Serif" if os.environ.get("SURVEY_FONT_MODE") == "portable" else "Times New Roman",
+        "svg_text": "paths", "captions": "below",
+    }
     path.write_text(nbf.writes(notebook), encoding="utf-8", newline="\n")
     return path
 
@@ -538,7 +540,7 @@ def default_target() -> Path:
     base = Path(__file__).resolve().parents[1]
     release_root = (
         base
-        if (base / "02_公开数据").is_dir()
+        if (base / "data").is_dir()
         else base / "public-release"
     )
     return release_root / "notebooks" / NOTEBOOK_NAME
@@ -551,7 +553,19 @@ if __name__ == "__main__":
         action="store_true",
         help="生成后使用当前 Python 环境完整执行 Notebook。",
     )
+    parser.add_argument("--check-execution", action="store_true",
+                        help="Execute in a temporary file without changing published outputs.")
+    parser.add_argument("--font-mode", choices=["publication", "portable"], default="publication")
     arguments = parser.parse_args()
+    if arguments.font_mode == "portable" and not arguments.check_execution:
+        parser.error("portable fonts are available only for isolated execution checks")
+    os.environ["SURVEY_FONT_MODE"] = arguments.font_mode
+    if arguments.check_execution:
+        with tempfile.TemporaryDirectory(prefix="survey-check-") as directory:
+            output = build_notebook(Path(directory) / NOTEBOOK_NAME)
+            execute_notebook(output)
+        print("notebook_execution=PASS")
+        raise SystemExit(0)
     output = build_notebook(default_target())
     if arguments.execute:
         execute_notebook(output)

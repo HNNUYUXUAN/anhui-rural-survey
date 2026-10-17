@@ -35,30 +35,30 @@ FORBIDDEN_FILE_SUFFIXES = {
     ".zip",
 }
 EXPECTED_PUBLIC_DATA_FILES = {
-    "02_公开数据/图表数据/fig1-2_ah_urban_rural_income.csv",
-    "02_公开数据/图表数据/fig4-1_land_status.csv",
-    "02_公开数据/图表数据/fig4-2_labor_fallow.csv",
-    "02_公开数据/图表数据/fig4-3_logit_or.csv",
-    "02_公开数据/图表数据/fig4-4_area_disaster_prediction.csv",
-    "02_公开数据/图表数据/fig5-2_profile_heatmap.csv",
-    "02_公开数据/图表数据/fig5-3_profile_metrics.csv",
-    "02_公开数据/图表数据/fig6-2_policy_future.csv",
-    "02_公开数据/图表数据/fig6-3_contract_service_constraints.csv",
-    "02_公开数据/图表数据/fig6-4_village_governance.csv",
-    "02_公开数据/图表数据/fig6-5_household_village_parallel.csv",
-    "02_公开数据/聚合分析结果/2025年画像汇总.csv",
-    "02_公开数据/聚合分析结果/2025年画像聚类元数据.json",
-    "02_公开数据/聚合分析结果/2025年画像特征热图数据.csv",
-    "02_公开数据/聚合分析结果/2025年连续结果模型.csv",
-    "02_公开数据/聚合分析结果/2025年撂荒分组统计.csv",
-    "02_公开数据/聚合分析结果/2025年撂荒模型结果.csv",
-    "02_公开数据/聚合分析结果/2025年敏感性检验.csv",
-    "02_公开数据/聚合分析结果/2025年土地状态统计.csv",
-    "02_公开数据/聚合分析结果/2025年预测情景网格.csv",
-    "02_公开数据/聚合分析结果/2026年村级指标.csv",
-    "02_公开数据/聚合分析结果/2026年户村并列指标.csv",
-    "02_公开数据/聚合分析结果/2026年农户指标.csv",
-    "02_公开数据/聚合分析结果/2026年质量口径.json",
+    "data/charts/fig1-2_ah_urban_rural_income.csv",
+    "data/charts/fig4-1_land_status.csv",
+    "data/charts/fig4-2_labor_fallow.csv",
+    "data/charts/fig4-3_logit_or.csv",
+    "data/charts/fig4-4_area_disaster_prediction.csv",
+    "data/charts/fig5-2_profile_heatmap.csv",
+    "data/charts/fig5-3_profile_metrics.csv",
+    "data/charts/fig6-2_policy_future.csv",
+    "data/charts/fig6-3_contract_service_constraints.csv",
+    "data/charts/fig6-4_village_governance.csv",
+    "data/charts/fig6-5_household_village_parallel.csv",
+    "data/results/profiles-2025.csv",
+    "data/results/cluster-metadata-2025.json",
+    "data/results/profile-features-2025.csv",
+    "data/results/continuous-models-2025.csv",
+    "data/results/fallow-groups-2025.csv",
+    "data/results/fallow-model-2025.csv",
+    "data/results/sensitivity-2025.csv",
+    "data/results/land-status-2025.csv",
+    "data/results/predictions-2025.csv",
+    "data/results/villages-2026.csv",
+    "data/results/household-village-2026.csv",
+    "data/results/households-2026.csv",
+    "data/results/quality-2026.json",
 }
 TEXT_SUFFIXES = {
     ".md",
@@ -276,8 +276,8 @@ def main() -> int:
     actual_public_data = {
         relative_path
         for relative_path in actual_paths
-        if relative_path.startswith("02_公开数据/")
-        and relative_path != "02_公开数据/README.md"
+        if relative_path.startswith("data/")
+        and relative_path != "data/README.md"
     }
     if actual_public_data != EXPECTED_PUBLIC_DATA_FILES:
         for item in sorted(actual_public_data - EXPECTED_PUBLIC_DATA_FILES):
@@ -302,6 +302,8 @@ def main() -> int:
 
     for path in actual_files:
         relative_path = path.relative_to(ROOT).as_posix()
+        if not relative_path.isascii():
+            problems.append(f"non_english_path:{relative_path}")
         if path.suffix.lower() in FORBIDDEN_FILE_SUFFIXES:
             problems.append(f"forbidden_file_type:{relative_path}")
         if any(part in relative_path for part in FORBIDDEN_PATH_PARTS):
@@ -321,14 +323,16 @@ def main() -> int:
             verify_docx_metadata(path, problems)
         if path.suffix.lower() == ".png":
             verify_png_metadata(path, problems)
-        if relative_path.startswith("02_公开数据/"):
+        if relative_path.startswith("data/"):
             verify_public_data_schema(path, problems)
         if path.suffix.lower() == ".md":
             verify_markdown_links(path, problems)
 
-    report = ROOT / "01_调研报告" / "把地种好，把日子过稳——稳定承包背景下安徽农户持续种粮的约束结构.md"
+    report = ROOT / "report" / "report.md"
     if "field_plate" in report.read_text(encoding="utf-8"):
         problems.append("report_contains_field_photo_link")
+    if r"\(" in report.read_text(encoding="utf-8"):
+        problems.append("report_legacy_inline_math")
 
     if problems:
         print("status=FAIL")

@@ -8,11 +8,11 @@
 ## 阅读入口
 
 - [项目首页](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/README.md)
-- [研究报告](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/01_%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/README.md)
-- [研究数据](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/README.md)
-- [图表与制图数据](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/README.md)
-- [参考文献](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/04_%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/README.md)
-- [调查工具](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/05_%E8%B0%83%E6%9F%A5%E5%B7%A5%E5%85%B7/README.md)
+- [研究报告](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/report/README.md)
+- [研究数据](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/data/README.md)
+- [图表与制图数据](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/figures/README.md)
+- [参考文献](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/references/README.md)
+- [调查工具](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/surveys/README.md)
 - [Notebook](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/notebooks/README.md)
 - [数据口径](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/DATA.md)
 - [复现指南](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/docs/usage.md)
@@ -20,6 +20,11 @@
 - [机器资源目录](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/docs/resource-catalog.json)
 - [引用](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/CITATION.cff)
 - [许可证](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/LICENSE)
+
+## 在线阅读
+
+- [完整报告](https://hnnuyuxuan.github.io/anhui-rural-survey/report/)
+- [已执行 Notebook](https://hnnuyuxuan.github.io/anhui-rural-survey/notebook/)
 
 ## 证据与计算
 

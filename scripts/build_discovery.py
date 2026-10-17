@@ -11,11 +11,11 @@ from urllib.parse import quote
 ROOT = Path(__file__).resolve().parents[1]
 REPOSITORY = "https://github.com/HNNUYUXUAN/anhui-rural-survey"
 GROUPS = {
-    "01_调研报告": "研究报告",
-    "02_公开数据": "研究数据",
-    "03_图表": "图表",
-    "04_参考文献": "参考文献",
-    "05_调查工具": "调查工具",
+    "report": "研究报告",
+    "data": "研究数据",
+    "figures": "图表",
+    "references": "参考文献",
+    "surveys": "调查工具",
     "notebooks": "分析 Notebook",
 }
 TOPICS = (
@@ -34,6 +34,8 @@ TOPICS = (
 
 def resources() -> list[dict]:
     result = []
+    migration = json.loads((ROOT / "docs/path-map.json").read_text(encoding="utf-8"))
+    titles = {new: Path(old).stem for old, new in migration.items()}
     for directory, kind in GROUPS.items():
         for path in sorted((ROOT / directory).rglob("*")):
             if not path.is_file() or path.name == "README.md":
@@ -42,7 +44,7 @@ def resources() -> list[dict]:
             keywords = sorted({word for triggers, words in TOPICS
                                if any(t in relative.casefold() for t in triggers)
                                for word in words})
-            item = {"title": path.stem, "kind": kind, "path": relative,
+            item = {"title": titles.get(relative, path.stem), "kind": kind, "path": relative,
                     "url": REPOSITORY + "/blob/main/" + quote(relative),
                     "format": path.suffix.lstrip("."), "keywords": keywords}
             if path.suffix == ".csv":
@@ -77,14 +79,15 @@ def outputs() -> dict[str, str]:
         f"研究材料版本：v{version}（{date}）。\n\n"
         "## 阅读入口\n\n"
     )
-    links = [("项目首页", "README.md"), ("研究报告", "01_调研报告/README.md"),
-             ("研究数据", "02_公开数据/README.md"), ("图表与制图数据", "03_图表/README.md"),
-             ("参考文献", "04_参考文献/README.md"), ("调查工具", "05_调查工具/README.md"),
+    links = [("项目首页", "README.md"), ("研究报告", "report/README.md"),
+             ("研究数据", "data/README.md"), ("图表与制图数据", "figures/README.md"),
+             ("参考文献", "references/README.md"), ("调查工具", "surveys/README.md"),
              ("Notebook", "notebooks/README.md"), ("数据口径", "DATA.md"),
              ("复现指南", "docs/usage.md"), ("Agent 接手指南", "docs/agent-guide.md"),
              ("机器资源目录", "docs/resource-catalog.json"), ("引用", "CITATION.cff"),
              ("许可证", "LICENSE")]
     brief = intro + "".join(f"- [{label}]({REPOSITORY}/blob/main/{quote(path)})\n" for label, path in links)
+    brief += "\n## 在线阅读\n\n- [完整报告](https://hnnuyuxuan.github.io/anhui-rural-survey/report/)\n- [已执行 Notebook](https://hnnuyuxuan.github.io/anhui-rural-survey/notebook/)\n"
     brief += (
         "\n## 证据与计算\n\n"
         "公开输入为聚合统计、模型输出与制图数据。Notebook 可复核比例、图表及文件间一致性；"

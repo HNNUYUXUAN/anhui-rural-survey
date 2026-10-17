@@ -2,7 +2,7 @@
 
 1. 软件代码
 
-`scripts/` 目录下的软件代码按 GNU Affero General Public License
+`scripts/` 与 `web/` 中的原创软件代码按 GNU Affero General Public License
 version 3 only（SPDX-License-Identifier: AGPL-3.0-only）授权。
 完整条款见 `LICENSES/AGPL-3.0-only.txt`。
 
@@ -15,6 +15,9 @@ Commons Attribution-ShareAlike 4.0 International
 完整条款见 `LICENSES/CC-BY-SA-4.0.txt`。
 
 3. 例外
+
+- `web/vendor/katex/` 使用 KaTeX 的 MIT 许可证，完整条款见
+  `LICENSES/KaTeX.txt`，版本与来源见 `docs/third-party.md`。
 
 - 参考文献的书目信息、外部链接、机构名称、标识和商标仍归各自权利人所有。
 - 本许可证不授予第三方全文、个人信息、肖像、隐私、商标、专利或其他未由
