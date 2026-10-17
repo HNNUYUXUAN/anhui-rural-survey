@@ -42,6 +42,8 @@ jobs:
         run: python scripts/test_plot_style.py
       - name: Build reading pages from reviewed outputs
         run: python scripts/build_site.py --output ../site
+      - name: Test reading links and captions
+        run: python scripts/test_site_rendering.py
       - name: Check reading-page JavaScript
         run: node --check web/site.js
       - name: Verify reading pages

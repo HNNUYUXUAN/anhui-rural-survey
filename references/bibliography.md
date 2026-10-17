@@ -1,4 +1,4 @@
-## 参考文献
+# 参考文献
 
 [1] JACOBY H G, LI G, ROZELLE S. Hazards of expropriation: Tenure insecurity and investment in rural China[J/OL]. American Economic Review, 2002, 92(5): 1420-1447[2026-08-25]. https://www.aeaweb.org/articles?id=10.1257%2F000282802762024575. DOI:10.1257/000282802762024575.
 

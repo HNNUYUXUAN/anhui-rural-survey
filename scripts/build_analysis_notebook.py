@@ -458,10 +458,24 @@ def build_notebook(target: Path) -> Path:
         ),
     ]
 
+    figure_titles = [
+        "2025年土地经营状态与劳动力分组", "2025年撂荒模型优势比与置信区间",
+        "经营面积与受灾情景下的预测撂荒比例", "2025年敏感性口径比较",
+        "2025年经营画像的占比与特征", "2026年农户端指标", "2026年村级指标",
+        "2026年农户与村级并列指标",
+    ]
+    numbered_cells = []
+    figure_number = 0
     for index, cell in enumerate(cells):
         cell["id"] = f"cell-{index:02d}"
+        numbered_cells.append(cell)
+        if cell.cell_type == "code" and "finish_figure(fig)" in cell.source:
+            figure_number += 1
+            caption = markdown(f"**图{figure_number}　{figure_titles[figure_number-1]}**")
+            caption["id"] = f"figure-caption-{figure_number:02d}"
+            numbered_cells.append(caption)
     notebook = nbf.v4.new_notebook(
-        cells=cells,
+        cells=numbered_cells,
         metadata={
             "kernelspec": {
                 "display_name": "Python 3",

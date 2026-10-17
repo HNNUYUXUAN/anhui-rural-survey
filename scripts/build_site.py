@@ -43,6 +43,20 @@ def relative(current: str, target: str) -> str:
 
 def enhance(body: str, source: str, destination: str) -> tuple[str, str]:
     soup = BeautifulSoup(body, "html.parser")
+    # Reference entries keep their original wording while exposing source URLs.
+    for text in list(soup.find_all(string=re.compile(r"https?://"))):
+        if text.find_parent(["a", "code", "pre", "script", "style"]):
+            continue
+        offset = 0
+        for match in re.finditer(r"https?://[^\s<>]+", str(text)):
+            url = match[0].rstrip(".,;。")
+            text.insert_before(str(text)[offset:match.start()])
+            link = soup.new_tag("a", href=url)
+            link.string = url
+            text.insert_before(link)
+            offset = match.start() + len(url)
+        text.insert_before(str(text)[offset:])
+        text.extract()
     for node in soup.select("a[href], img[src]"):
         attr = "src" if node.name == "img" else "href"
         value = node[attr]
@@ -52,15 +66,21 @@ def enhance(body: str, source: str, destination: str) -> tuple[str, str]:
         target = posixpath.normpath(posixpath.join(posixpath.dirname(source), unquote(parsed.path)))
         if target.startswith("../"):
             raise ValueError(f"Link escapes repository: {source}: {value}")
-        if target.endswith(".md"):
+        if target == "report/report.md" and "源" in node.get_text():
+            node["download"] = "report.md"
+        elif target.endswith(".md"):
             target = route(target)
         node[attr] = relative(destination, target) + ("#" + parsed.fragment if parsed.fragment else "")
     headings = []
     for index, heading in enumerate(soup.select("h2"), 1):
         previous = heading.find_previous_sibling()
-        anchor = previous.get("id") if previous and previous.name == "a" else None
+        anchor_node = previous if previous and previous.name == "a" else (
+            previous.find("a", id=True) if previous and previous.name == "p" and not previous.get_text(strip=True) else None)
+        anchor = anchor_node.get("id") if anchor_node else None
         identifier = anchor or f"section-{index}"
-        heading["id"] = heading.get("id", identifier if not anchor else identifier+"-title")
+        if anchor_node:
+            previous.decompose()
+        heading["id"] = heading.get("id", identifier)
         headings.append((identifier, heading.get_text(" ", strip=True)))
     for table in soup.find_all("table"):
         previous = table.find_previous_sibling()
@@ -93,7 +113,21 @@ def enhance(body: str, source: str, destination: str) -> tuple[str, str]:
         if next_paragraph and next_paragraph.find("em") and next_paragraph.get_text(strip=True).startswith(("图", "研究框架")):
             next_paragraph.name = "figcaption"
             paragraph.append(next_paragraph.extract())
-    toc = "<ol>" + "".join(f'<li><a href="#{key}">{html.escape(label)}</a></li>' for key,label in headings) + "</ol>"
+    # Notebook captions are Markdown cells following their executed figure cell.
+    for paragraph in list(soup.find_all("p")):
+        if not re.match(r"图\d+　", paragraph.get_text(strip=True)):
+            continue
+        previous = paragraph.find_previous_sibling()
+        if previous and "notebook-cell" in previous.get("class", []):
+            figures = previous.find_all("figure")
+            if figures:
+                paragraph.name = "figcaption"
+                figures[-1].append(paragraph.extract())
+    for figure in soup.find_all("figure"):
+        if figure.figcaption:
+            number = re.match(r"图\s*(\d+(?:-\d+)?)", figure.figcaption.get_text(strip=True))
+            if number:figure["id"] = "figure-" + number[1]
+    toc = "<ul>" + "".join(f'<li><a href="#{key}">{html.escape(label)}</a></li>' for key,label in headings) + "</ul>"
     return str(soup), toc
 
 
