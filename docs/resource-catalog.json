@@ -1,0 +1,1065 @@
+{
+  "schema_version": 1,
+  "title": "安徽农户持续种粮调研项目",
+  "repository": "https://github.com/HNNUYUXUAN/anhui-rural-survey",
+  "research_version": "1.0.0",
+  "date_released": "2026-09-14",
+  "record_count_definition": "CSV 数据行数；样本量与有效分母见具体字段及报告。",
+  "resources": [
+    {
+      "title": "把地种好，把日子过稳——稳定承包背景下安徽农户持续种粮的约束结构",
+      "kind": "研究报告",
+      "path": "01_调研报告/把地种好，把日子过稳——稳定承包背景下安徽农户持续种粮的约束结构.md",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/01_%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/%E6%8A%8A%E5%9C%B0%E7%A7%8D%E5%A5%BD%EF%BC%8C%E6%8A%8A%E6%97%A5%E5%AD%90%E8%BF%87%E7%A8%B3%E2%80%94%E2%80%94%E7%A8%B3%E5%AE%9A%E6%89%BF%E5%8C%85%E8%83%8C%E6%99%AF%E4%B8%8B%E5%AE%89%E5%BE%BD%E5%86%9C%E6%88%B7%E6%8C%81%E7%BB%AD%E7%A7%8D%E7%B2%AE%E7%9A%84%E7%BA%A6%E6%9D%9F%E7%BB%93%E6%9E%84.md",
+      "format": "md",
+      "keywords": [
+        "household",
+        "农户"
+      ]
+    },
+    {
+      "title": "fig1-2_ah_urban_rural_income",
+      "kind": "研究数据",
+      "path": "02_公开数据/图表数据/fig1-2_ah_urban_rural_income.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E5%9B%BE%E8%A1%A8%E6%95%B0%E6%8D%AE/fig1-2_ah_urban_rural_income.csv",
+      "format": "csv",
+      "keywords": [
+        "income",
+        "收入"
+      ],
+      "columns": [
+        "year",
+        "urban_yuan",
+        "rural_yuan"
+      ],
+      "record_count": 5
+    },
+    {
+      "title": "fig4-1_land_status",
+      "kind": "研究数据",
+      "path": "02_公开数据/图表数据/fig4-1_land_status.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E5%9B%BE%E8%A1%A8%E6%95%B0%E6%8D%AE/fig4-1_land_status.csv",
+      "format": "csv",
+      "keywords": [
+        "fallow",
+        "land",
+        "logit",
+        "sensitivity",
+        "tenure",
+        "土地",
+        "承包",
+        "撂荒",
+        "敏感性"
+      ],
+      "columns": [
+        "category",
+        "value",
+        "n"
+      ],
+      "record_count": 4
+    },
+    {
+      "title": "fig4-2_labor_fallow",
+      "kind": "研究数据",
+      "path": "02_公开数据/图表数据/fig4-2_labor_fallow.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E5%9B%BE%E8%A1%A8%E6%95%B0%E6%8D%AE/fig4-2_labor_fallow.csv",
+      "format": "csv",
+      "keywords": [
+        "fallow",
+        "logit",
+        "sensitivity",
+        "撂荒",
+        "敏感性"
+      ],
+      "columns": [
+        "category",
+        "value",
+        "n"
+      ],
+      "record_count": 3
+    },
+    {
+      "title": "fig4-3_logit_or",
+      "kind": "研究数据",
+      "path": "02_公开数据/图表数据/fig4-3_logit_or.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E5%9B%BE%E8%A1%A8%E6%95%B0%E6%8D%AE/fig4-3_logit_or.csv",
+      "format": "csv",
+      "keywords": [
+        "disaster",
+        "fallow",
+        "income",
+        "logit",
+        "risk",
+        "sensitivity",
+        "撂荒",
+        "收入",
+        "敏感性",
+        "灾害",
+        "风险"
+      ],
+      "columns": [
+        "category",
+        "odds_ratio",
+        "ci_low_or",
+        "ci_high_or",
+        "n"
+      ],
+      "record_count": 6
+    },
+    {
+      "title": "fig4-4_area_disaster_prediction",
+      "kind": "研究数据",
+      "path": "02_公开数据/图表数据/fig4-4_area_disaster_prediction.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E5%9B%BE%E8%A1%A8%E6%95%B0%E6%8D%AE/fig4-4_area_disaster_prediction.csv",
+      "format": "csv",
+      "keywords": [
+        "disaster",
+        "risk",
+        "灾害",
+        "风险"
+      ],
+      "columns": [
+        "category",
+        "operated_area_mu",
+        "value"
+      ],
+      "record_count": 160
+    },
+    {
+      "title": "fig5-2_profile_heatmap",
+      "kind": "研究数据",
+      "path": "02_公开数据/图表数据/fig5-2_profile_heatmap.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E5%9B%BE%E8%A1%A8%E6%95%B0%E6%8D%AE/fig5-2_profile_heatmap.csv",
+      "format": "csv",
+      "keywords": [
+        "cluster",
+        "profile",
+        "农户画像"
+      ],
+      "columns": [
+        "cluster",
+        "labor",
+        "operated_area",
+        "grain_area",
+        "plot_count",
+        "agricultural_income",
+        "nonagricultural_income",
+        "profile"
+      ],
+      "record_count": 4
+    },
+    {
+      "title": "fig5-3_profile_metrics",
+      "kind": "研究数据",
+      "path": "02_公开数据/图表数据/fig5-3_profile_metrics.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E5%9B%BE%E8%A1%A8%E6%95%B0%E6%8D%AE/fig5-3_profile_metrics.csv",
+      "format": "csv",
+      "keywords": [
+        "cluster",
+        "profile",
+        "农户画像"
+      ],
+      "columns": [
+        "cluster",
+        "labor",
+        "operated_area",
+        "grain_area",
+        "plot_count",
+        "agricultural_income",
+        "nonagricultural_income",
+        "profile",
+        "largest_plot",
+        "managed_area",
+        "fallow_percent",
+        "managed_percent",
+        "transfer_out_percent",
+        "transfer_in_percent",
+        "n",
+        "share_percent"
+      ],
+      "record_count": 4
+    },
+    {
+      "title": "fig6-2_policy_future",
+      "kind": "研究数据",
+      "path": "02_公开数据/图表数据/fig6-2_policy_future.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E5%9B%BE%E8%A1%A8%E6%95%B0%E6%8D%AE/fig6-2_policy_future.csv",
+      "format": "csv",
+      "keywords": [
+        "future",
+        "land",
+        "policy",
+        "tenure",
+        "土地",
+        "承包",
+        "政策认知",
+        "未来安排"
+      ],
+      "columns": [
+        "label",
+        "n",
+        "success",
+        "percent",
+        "denominator_rule",
+        "sensitivity_n",
+        "sensitivity_success",
+        "sensitivity_percent"
+      ],
+      "record_count": 6
+    },
+    {
+      "title": "fig6-3_contract_service_constraints",
+      "kind": "研究数据",
+      "path": "02_公开数据/图表数据/fig6-3_contract_service_constraints.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E5%9B%BE%E8%A1%A8%E6%95%B0%E6%8D%AE/fig6-3_contract_service_constraints.csv",
+      "format": "csv",
+      "keywords": [
+        "contract",
+        "land",
+        "service",
+        "tenure",
+        "合同",
+        "土地",
+        "托管",
+        "承包"
+      ],
+      "columns": [
+        "label",
+        "n",
+        "success",
+        "percent",
+        "denominator_rule",
+        "sensitivity_n",
+        "sensitivity_success",
+        "sensitivity_percent"
+      ],
+      "record_count": 6
+    },
+    {
+      "title": "fig6-4_village_governance",
+      "kind": "研究数据",
+      "path": "02_公开数据/图表数据/fig6-4_village_governance.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E5%9B%BE%E8%A1%A8%E6%95%B0%E6%8D%AE/fig6-4_village_governance.csv",
+      "format": "csv",
+      "keywords": [
+        "contract",
+        "future",
+        "governance",
+        "land",
+        "policy",
+        "service",
+        "tenure",
+        "village",
+        "合同",
+        "土地",
+        "托管",
+        "承包",
+        "政策认知",
+        "未来安排",
+        "村级",
+        "治理"
+      ],
+      "columns": [
+        "label",
+        "n",
+        "success",
+        "percent",
+        "denominator_rule",
+        "sensitivity_n",
+        "sensitivity_success",
+        "sensitivity_percent"
+      ],
+      "record_count": 6
+    },
+    {
+      "title": "fig6-5_household_village_parallel",
+      "kind": "研究数据",
+      "path": "02_公开数据/图表数据/fig6-5_household_village_parallel.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E5%9B%BE%E8%A1%A8%E6%95%B0%E6%8D%AE/fig6-5_household_village_parallel.csv",
+      "format": "csv",
+      "keywords": [
+        "contract",
+        "future",
+        "governance",
+        "household",
+        "policy",
+        "service",
+        "village",
+        "农户",
+        "合同",
+        "托管",
+        "政策认知",
+        "未来安排",
+        "村级",
+        "治理"
+      ],
+      "columns": [
+        "theme",
+        "household_label",
+        "household_percent",
+        "household_n",
+        "village_label",
+        "village_percent",
+        "village_n"
+      ],
+      "record_count": 3
+    },
+    {
+      "title": "2025年土地状态统计",
+      "kind": "研究数据",
+      "path": "02_公开数据/聚合分析结果/2025年土地状态统计.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2025%E5%B9%B4%E5%9C%9F%E5%9C%B0%E7%8A%B6%E6%80%81%E7%BB%9F%E8%AE%A1.csv",
+      "format": "csv",
+      "keywords": [
+        "fallow",
+        "land",
+        "logit",
+        "sensitivity",
+        "tenure",
+        "土地",
+        "承包",
+        "撂荒",
+        "敏感性"
+      ],
+      "columns": [
+        "state",
+        "n",
+        "percent"
+      ],
+      "record_count": 4
+    },
+    {
+      "title": "2025年撂荒分组统计",
+      "kind": "研究数据",
+      "path": "02_公开数据/聚合分析结果/2025年撂荒分组统计.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2025%E5%B9%B4%E6%92%82%E8%8D%92%E5%88%86%E7%BB%84%E7%BB%9F%E8%AE%A1.csv",
+      "format": "csv",
+      "keywords": [
+        "fallow",
+        "logit",
+        "sensitivity",
+        "撂荒",
+        "敏感性"
+      ],
+      "columns": [
+        "group",
+        "n",
+        "fallow_percent"
+      ],
+      "record_count": 3
+    },
+    {
+      "title": "2025年撂荒模型结果",
+      "kind": "研究数据",
+      "path": "02_公开数据/聚合分析结果/2025年撂荒模型结果.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2025%E5%B9%B4%E6%92%82%E8%8D%92%E6%A8%A1%E5%9E%8B%E7%BB%93%E6%9E%9C.csv",
+      "format": "csv",
+      "keywords": [
+        "disaster",
+        "fallow",
+        "income",
+        "logit",
+        "risk",
+        "sensitivity",
+        "撂荒",
+        "收入",
+        "敏感性",
+        "灾害",
+        "风险"
+      ],
+      "columns": [
+        "term",
+        "coef_log_odds",
+        "odds_ratio",
+        "ci_low_or",
+        "ci_high_or",
+        "bootstrap_sign_p",
+        "n",
+        "bootstrap_replicates"
+      ],
+      "record_count": 7
+    },
+    {
+      "title": "2025年敏感性检验",
+      "kind": "研究数据",
+      "path": "02_公开数据/聚合分析结果/2025年敏感性检验.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2025%E5%B9%B4%E6%95%8F%E6%84%9F%E6%80%A7%E6%A3%80%E9%AA%8C.csv",
+      "format": "csv",
+      "keywords": [
+        "fallow",
+        "logit",
+        "sensitivity",
+        "撂荒",
+        "敏感性"
+      ],
+      "columns": [
+        "scenario",
+        "n",
+        "fallow_percent",
+        "labor_or",
+        "area_or",
+        "disaster_or",
+        "status"
+      ],
+      "record_count": 5
+    },
+    {
+      "title": "2025年画像汇总",
+      "kind": "研究数据",
+      "path": "02_公开数据/聚合分析结果/2025年画像汇总.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2025%E5%B9%B4%E7%94%BB%E5%83%8F%E6%B1%87%E6%80%BB.csv",
+      "format": "csv",
+      "keywords": [
+        "cluster",
+        "profile",
+        "农户画像"
+      ],
+      "columns": [
+        "cluster",
+        "labor",
+        "operated_area",
+        "grain_area",
+        "plot_count",
+        "largest_plot",
+        "agricultural_income",
+        "nonagricultural_income",
+        "managed_area",
+        "fallow_percent",
+        "managed_percent",
+        "transfer_out_percent",
+        "transfer_in_percent",
+        "n",
+        "share_percent",
+        "profile"
+      ],
+      "record_count": 4
+    },
+    {
+      "title": "2025年画像特征热图数据",
+      "kind": "研究数据",
+      "path": "02_公开数据/聚合分析结果/2025年画像特征热图数据.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2025%E5%B9%B4%E7%94%BB%E5%83%8F%E7%89%B9%E5%BE%81%E7%83%AD%E5%9B%BE%E6%95%B0%E6%8D%AE.csv",
+      "format": "csv",
+      "keywords": [
+        "cluster",
+        "profile",
+        "农户画像"
+      ],
+      "columns": [
+        "cluster",
+        "labor",
+        "operated_area",
+        "grain_area",
+        "plot_count",
+        "agricultural_income",
+        "nonagricultural_income",
+        "profile"
+      ],
+      "record_count": 4
+    },
+    {
+      "title": "2025年画像聚类元数据",
+      "kind": "研究数据",
+      "path": "02_公开数据/聚合分析结果/2025年画像聚类元数据.json",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2025%E5%B9%B4%E7%94%BB%E5%83%8F%E8%81%9A%E7%B1%BB%E5%85%83%E6%95%B0%E6%8D%AE.json",
+      "format": "json",
+      "keywords": [
+        "cluster",
+        "profile",
+        "农户画像"
+      ]
+    },
+    {
+      "title": "2025年连续结果模型",
+      "kind": "研究数据",
+      "path": "02_公开数据/聚合分析结果/2025年连续结果模型.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2025%E5%B9%B4%E8%BF%9E%E7%BB%AD%E7%BB%93%E6%9E%9C%E6%A8%A1%E5%9E%8B.csv",
+      "format": "csv",
+      "keywords": [
+        "income",
+        "收入"
+      ],
+      "columns": [
+        "outcome",
+        "predictor",
+        "standardized_coef",
+        "ci_low",
+        "ci_high",
+        "n",
+        "bootstrap_replicates"
+      ],
+      "record_count": 10
+    },
+    {
+      "title": "2025年预测情景网格",
+      "kind": "研究数据",
+      "path": "02_公开数据/聚合分析结果/2025年预测情景网格.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2025%E5%B9%B4%E9%A2%84%E6%B5%8B%E6%83%85%E6%99%AF%E7%BD%91%E6%A0%BC.csv",
+      "format": "csv",
+      "keywords": [],
+      "columns": [
+        "operated_area_mu",
+        "disaster",
+        "predicted_fallow_percent"
+      ],
+      "record_count": 160
+    },
+    {
+      "title": "2026年农户指标",
+      "kind": "研究数据",
+      "path": "02_公开数据/聚合分析结果/2026年农户指标.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2026%E5%B9%B4%E5%86%9C%E6%88%B7%E6%8C%87%E6%A0%87.csv",
+      "format": "csv",
+      "keywords": [
+        "contract",
+        "future",
+        "household",
+        "land",
+        "policy",
+        "service",
+        "tenure",
+        "农户",
+        "合同",
+        "土地",
+        "托管",
+        "承包",
+        "政策认知",
+        "未来安排"
+      ],
+      "columns": [
+        "label",
+        "n",
+        "success",
+        "percent",
+        "denominator_rule",
+        "sensitivity_n",
+        "sensitivity_success",
+        "sensitivity_percent"
+      ],
+      "record_count": 16
+    },
+    {
+      "title": "2026年户村并列指标",
+      "kind": "研究数据",
+      "path": "02_公开数据/聚合分析结果/2026年户村并列指标.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2026%E5%B9%B4%E6%88%B7%E6%9D%91%E5%B9%B6%E5%88%97%E6%8C%87%E6%A0%87.csv",
+      "format": "csv",
+      "keywords": [
+        "contract",
+        "future",
+        "governance",
+        "policy",
+        "service",
+        "village",
+        "合同",
+        "托管",
+        "政策认知",
+        "未来安排",
+        "村级",
+        "治理"
+      ],
+      "columns": [
+        "theme",
+        "household_label",
+        "household_percent",
+        "household_n",
+        "village_label",
+        "village_percent",
+        "village_n"
+      ],
+      "record_count": 3
+    },
+    {
+      "title": "2026年村级指标",
+      "kind": "研究数据",
+      "path": "02_公开数据/聚合分析结果/2026年村级指标.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2026%E5%B9%B4%E6%9D%91%E7%BA%A7%E6%8C%87%E6%A0%87.csv",
+      "format": "csv",
+      "keywords": [
+        "contract",
+        "future",
+        "governance",
+        "land",
+        "policy",
+        "service",
+        "tenure",
+        "village",
+        "合同",
+        "土地",
+        "托管",
+        "承包",
+        "政策认知",
+        "未来安排",
+        "村级",
+        "治理"
+      ],
+      "columns": [
+        "label",
+        "n",
+        "success",
+        "percent",
+        "denominator_rule",
+        "sensitivity_n",
+        "sensitivity_success",
+        "sensitivity_percent"
+      ],
+      "record_count": 10
+    },
+    {
+      "title": "2026年质量口径",
+      "kind": "研究数据",
+      "path": "02_公开数据/聚合分析结果/2026年质量口径.json",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C/2026%E5%B9%B4%E8%B4%A8%E9%87%8F%E5%8F%A3%E5%BE%84.json",
+      "format": "json",
+      "keywords": []
+    },
+    {
+      "title": "fig1-2_ah_urban_rural_income",
+      "kind": "图表",
+      "path": "03_图表/01_统计图/fig1-2_ah_urban_rural_income.png",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig1-2_ah_urban_rural_income.png",
+      "format": "png",
+      "keywords": [
+        "income",
+        "收入"
+      ]
+    },
+    {
+      "title": "fig1-2_ah_urban_rural_income",
+      "kind": "图表",
+      "path": "03_图表/01_统计图/fig1-2_ah_urban_rural_income.svg",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig1-2_ah_urban_rural_income.svg",
+      "format": "svg",
+      "keywords": [
+        "income",
+        "收入"
+      ]
+    },
+    {
+      "title": "fig4-1_land_status",
+      "kind": "图表",
+      "path": "03_图表/01_统计图/fig4-1_land_status.png",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig4-1_land_status.png",
+      "format": "png",
+      "keywords": [
+        "land",
+        "tenure",
+        "土地",
+        "承包"
+      ]
+    },
+    {
+      "title": "fig4-1_land_status",
+      "kind": "图表",
+      "path": "03_图表/01_统计图/fig4-1_land_status.svg",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig4-1_land_status.svg",
+      "format": "svg",
+      "keywords": [
+        "land",
+        "tenure",
+        "土地",
+        "承包"
+      ]
+    },
+    {
+      "title": "fig4-2_labor_fallow",
+      "kind": "图表",
+      "path": "03_图表/01_统计图/fig4-2_labor_fallow.png",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig4-2_labor_fallow.png",
+      "format": "png",
+      "keywords": [
+        "fallow",
+        "logit",
+        "sensitivity",
+        "撂荒",
+        "敏感性"
+      ]
+    },
+    {
+      "title": "fig4-2_labor_fallow",
+      "kind": "图表",
+      "path": "03_图表/01_统计图/fig4-2_labor_fallow.svg",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig4-2_labor_fallow.svg",
+      "format": "svg",
+      "keywords": [
+        "fallow",
+        "logit",
+        "sensitivity",
+        "撂荒",
+        "敏感性"
+      ]
+    },
+    {
+      "title": "fig4-3_logit_or",
+      "kind": "图表",
+      "path": "03_图表/01_统计图/fig4-3_logit_or.png",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig4-3_logit_or.png",
+      "format": "png",
+      "keywords": [
+        "fallow",
+        "logit",
+        "sensitivity",
+        "撂荒",
+        "敏感性"
+      ]
+    },
+    {
+      "title": "fig4-3_logit_or",
+      "kind": "图表",
+      "path": "03_图表/01_统计图/fig4-3_logit_or.svg",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig4-3_logit_or.svg",
+      "format": "svg",
+      "keywords": [
+        "fallow",
+        "logit",
+        "sensitivity",
+        "撂荒",
+        "敏感性"
+      ]
+    },
+    {
+      "title": "fig4-4_area_disaster_prediction",
+      "kind": "图表",
+      "path": "03_图表/01_统计图/fig4-4_area_disaster_prediction.png",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig4-4_area_disaster_prediction.png",
+      "format": "png",
+      "keywords": [
+        "disaster",
+        "risk",
+        "灾害",
+        "风险"
+      ]
+    },
+    {
+      "title": "fig4-4_area_disaster_prediction",
+      "kind": "图表",
+      "path": "03_图表/01_统计图/fig4-4_area_disaster_prediction.svg",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig4-4_area_disaster_prediction.svg",
+      "format": "svg",
+      "keywords": [
+        "disaster",
+        "risk",
+        "灾害",
+        "风险"
+      ]
+    },
+    {
+      "title": "fig5-2_profile_heatmap",
+      "kind": "图表",
+      "path": "03_图表/01_统计图/fig5-2_profile_heatmap.png",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig5-2_profile_heatmap.png",
+      "format": "png",
+      "keywords": [
+        "cluster",
+        "profile",
+        "农户画像"
+      ]
+    },
+    {
+      "title": "fig5-2_profile_heatmap",
+      "kind": "图表",
+      "path": "03_图表/01_统计图/fig5-2_profile_heatmap.svg",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig5-2_profile_heatmap.svg",
+      "format": "svg",
+      "keywords": [
+        "cluster",
+        "profile",
+        "农户画像"
+      ]
+    },
+    {
+      "title": "fig5-3_profile_metrics",
+      "kind": "图表",
+      "path": "03_图表/01_统计图/fig5-3_profile_metrics.png",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig5-3_profile_metrics.png",
+      "format": "png",
+      "keywords": [
+        "cluster",
+        "profile",
+        "农户画像"
+      ]
+    },
+    {
+      "title": "fig5-3_profile_metrics",
+      "kind": "图表",
+      "path": "03_图表/01_统计图/fig5-3_profile_metrics.svg",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig5-3_profile_metrics.svg",
+      "format": "svg",
+      "keywords": [
+        "cluster",
+        "profile",
+        "农户画像"
+      ]
+    },
+    {
+      "title": "fig6-2_policy_future",
+      "kind": "图表",
+      "path": "03_图表/01_统计图/fig6-2_policy_future.png",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig6-2_policy_future.png",
+      "format": "png",
+      "keywords": [
+        "future",
+        "policy",
+        "政策认知",
+        "未来安排"
+      ]
+    },
+    {
+      "title": "fig6-2_policy_future",
+      "kind": "图表",
+      "path": "03_图表/01_统计图/fig6-2_policy_future.svg",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig6-2_policy_future.svg",
+      "format": "svg",
+      "keywords": [
+        "future",
+        "policy",
+        "政策认知",
+        "未来安排"
+      ]
+    },
+    {
+      "title": "fig6-3_contract_service_constraints",
+      "kind": "图表",
+      "path": "03_图表/01_统计图/fig6-3_contract_service_constraints.png",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig6-3_contract_service_constraints.png",
+      "format": "png",
+      "keywords": [
+        "contract",
+        "service",
+        "合同",
+        "托管"
+      ]
+    },
+    {
+      "title": "fig6-3_contract_service_constraints",
+      "kind": "图表",
+      "path": "03_图表/01_统计图/fig6-3_contract_service_constraints.svg",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig6-3_contract_service_constraints.svg",
+      "format": "svg",
+      "keywords": [
+        "contract",
+        "service",
+        "合同",
+        "托管"
+      ]
+    },
+    {
+      "title": "fig6-4_village_governance",
+      "kind": "图表",
+      "path": "03_图表/01_统计图/fig6-4_village_governance.png",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig6-4_village_governance.png",
+      "format": "png",
+      "keywords": [
+        "governance",
+        "village",
+        "村级",
+        "治理"
+      ]
+    },
+    {
+      "title": "fig6-4_village_governance",
+      "kind": "图表",
+      "path": "03_图表/01_统计图/fig6-4_village_governance.svg",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig6-4_village_governance.svg",
+      "format": "svg",
+      "keywords": [
+        "governance",
+        "village",
+        "村级",
+        "治理"
+      ]
+    },
+    {
+      "title": "fig6-5_household_village_parallel",
+      "kind": "图表",
+      "path": "03_图表/01_统计图/fig6-5_household_village_parallel.png",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig6-5_household_village_parallel.png",
+      "format": "png",
+      "keywords": [
+        "governance",
+        "household",
+        "village",
+        "农户",
+        "村级",
+        "治理"
+      ]
+    },
+    {
+      "title": "fig6-5_household_village_parallel",
+      "kind": "图表",
+      "path": "03_图表/01_统计图/fig6-5_household_village_parallel.svg",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/01_%E7%BB%9F%E8%AE%A1%E5%9B%BE/fig6-5_household_village_parallel.svg",
+      "format": "svg",
+      "keywords": [
+        "governance",
+        "household",
+        "village",
+        "农户",
+        "村级",
+        "治理"
+      ]
+    },
+    {
+      "title": "fig1-1_grain_continuity_mechanism",
+      "kind": "图表",
+      "path": "03_图表/02_逻辑图/fig1-1_grain_continuity_mechanism.png",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/02_%E9%80%BB%E8%BE%91%E5%9B%BE/fig1-1_grain_continuity_mechanism.png",
+      "format": "png",
+      "keywords": []
+    },
+    {
+      "title": "fig3-1_empirical_workflow",
+      "kind": "图表",
+      "path": "03_图表/02_逻辑图/fig3-1_empirical_workflow.png",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/02_%E9%80%BB%E8%BE%91%E5%9B%BE/fig3-1_empirical_workflow.png",
+      "format": "png",
+      "keywords": []
+    },
+    {
+      "title": "fig5-1_profile_classification",
+      "kind": "图表",
+      "path": "03_图表/02_逻辑图/fig5-1_profile_classification.png",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/02_%E9%80%BB%E8%BE%91%E5%9B%BE/fig5-1_profile_classification.png",
+      "format": "png",
+      "keywords": [
+        "cluster",
+        "profile",
+        "农户画像"
+      ]
+    },
+    {
+      "title": "fig6-1_policy_transmission",
+      "kind": "图表",
+      "path": "03_图表/02_逻辑图/fig6-1_policy_transmission.png",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/02_%E9%80%BB%E8%BE%91%E5%9B%BE/fig6-1_policy_transmission.png",
+      "format": "png",
+      "keywords": [
+        "future",
+        "policy",
+        "政策认知",
+        "未来安排"
+      ]
+    },
+    {
+      "title": "fig7-1_risk_recovery_loop",
+      "kind": "图表",
+      "path": "03_图表/02_逻辑图/fig7-1_risk_recovery_loop.png",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/02_%E9%80%BB%E8%BE%91%E5%9B%BE/fig7-1_risk_recovery_loop.png",
+      "format": "png",
+      "keywords": [
+        "disaster",
+        "risk",
+        "灾害",
+        "风险"
+      ]
+    },
+    {
+      "title": "参考文献_按正文引用顺序",
+      "kind": "参考文献",
+      "path": "04_参考文献/参考文献_按正文引用顺序.md",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/04_%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE_%E6%8C%89%E6%AD%A3%E6%96%87%E5%BC%95%E7%94%A8%E9%A1%BA%E5%BA%8F.md",
+      "format": "md",
+      "keywords": []
+    },
+    {
+      "title": "参考文献来源登记",
+      "kind": "参考文献",
+      "path": "04_参考文献/参考文献来源登记.csv",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/04_%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E6%9D%A5%E6%BA%90%E7%99%BB%E8%AE%B0.csv",
+      "format": "csv",
+      "keywords": [],
+      "columns": [
+        "citation_number",
+        "citation"
+      ],
+      "record_count": 21
+    },
+    {
+      "title": "稳定土地承包关系与粮食生产经营提质增效调查问卷——农户调查问卷",
+      "kind": "调查工具",
+      "path": "05_调查工具/稳定土地承包关系与粮食生产经营提质增效调查问卷——农户调查问卷.docx",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/05_%E8%B0%83%E6%9F%A5%E5%B7%A5%E5%85%B7/%E7%A8%B3%E5%AE%9A%E5%9C%9F%E5%9C%B0%E6%89%BF%E5%8C%85%E5%85%B3%E7%B3%BB%E4%B8%8E%E7%B2%AE%E9%A3%9F%E7%94%9F%E4%BA%A7%E7%BB%8F%E8%90%A5%E6%8F%90%E8%B4%A8%E5%A2%9E%E6%95%88%E8%B0%83%E6%9F%A5%E9%97%AE%E5%8D%B7%E2%80%94%E2%80%94%E5%86%9C%E6%88%B7%E8%B0%83%E6%9F%A5%E9%97%AE%E5%8D%B7.docx",
+      "format": "docx",
+      "keywords": [
+        "household",
+        "land",
+        "questionnaire",
+        "survey",
+        "tenure",
+        "农户",
+        "土地",
+        "承包",
+        "问卷"
+      ]
+    },
+    {
+      "title": "稳定土地承包关系与粮食生产经营提质增效调查问卷——农户调查问卷",
+      "kind": "调查工具",
+      "path": "05_调查工具/稳定土地承包关系与粮食生产经营提质增效调查问卷——农户调查问卷.txt",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/05_%E8%B0%83%E6%9F%A5%E5%B7%A5%E5%85%B7/%E7%A8%B3%E5%AE%9A%E5%9C%9F%E5%9C%B0%E6%89%BF%E5%8C%85%E5%85%B3%E7%B3%BB%E4%B8%8E%E7%B2%AE%E9%A3%9F%E7%94%9F%E4%BA%A7%E7%BB%8F%E8%90%A5%E6%8F%90%E8%B4%A8%E5%A2%9E%E6%95%88%E8%B0%83%E6%9F%A5%E9%97%AE%E5%8D%B7%E2%80%94%E2%80%94%E5%86%9C%E6%88%B7%E8%B0%83%E6%9F%A5%E9%97%AE%E5%8D%B7.txt",
+      "format": "txt",
+      "keywords": [
+        "household",
+        "land",
+        "questionnaire",
+        "survey",
+        "tenure",
+        "农户",
+        "土地",
+        "承包",
+        "问卷"
+      ]
+    },
+    {
+      "title": "稳定土地承包关系与粮食生产经营提质增效调查问卷——村干部调查问卷",
+      "kind": "调查工具",
+      "path": "05_调查工具/稳定土地承包关系与粮食生产经营提质增效调查问卷——村干部调查问卷.docx",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/05_%E8%B0%83%E6%9F%A5%E5%B7%A5%E5%85%B7/%E7%A8%B3%E5%AE%9A%E5%9C%9F%E5%9C%B0%E6%89%BF%E5%8C%85%E5%85%B3%E7%B3%BB%E4%B8%8E%E7%B2%AE%E9%A3%9F%E7%94%9F%E4%BA%A7%E7%BB%8F%E8%90%A5%E6%8F%90%E8%B4%A8%E5%A2%9E%E6%95%88%E8%B0%83%E6%9F%A5%E9%97%AE%E5%8D%B7%E2%80%94%E2%80%94%E6%9D%91%E5%B9%B2%E9%83%A8%E8%B0%83%E6%9F%A5%E9%97%AE%E5%8D%B7.docx",
+      "format": "docx",
+      "keywords": [
+        "governance",
+        "land",
+        "questionnaire",
+        "survey",
+        "tenure",
+        "village",
+        "土地",
+        "承包",
+        "村级",
+        "治理",
+        "问卷"
+      ]
+    },
+    {
+      "title": "稳定土地承包关系与粮食生产经营提质增效调查问卷——村干部调查问卷",
+      "kind": "调查工具",
+      "path": "05_调查工具/稳定土地承包关系与粮食生产经营提质增效调查问卷——村干部调查问卷.txt",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/05_%E8%B0%83%E6%9F%A5%E5%B7%A5%E5%85%B7/%E7%A8%B3%E5%AE%9A%E5%9C%9F%E5%9C%B0%E6%89%BF%E5%8C%85%E5%85%B3%E7%B3%BB%E4%B8%8E%E7%B2%AE%E9%A3%9F%E7%94%9F%E4%BA%A7%E7%BB%8F%E8%90%A5%E6%8F%90%E8%B4%A8%E5%A2%9E%E6%95%88%E8%B0%83%E6%9F%A5%E9%97%AE%E5%8D%B7%E2%80%94%E2%80%94%E6%9D%91%E5%B9%B2%E9%83%A8%E8%B0%83%E6%9F%A5%E9%97%AE%E5%8D%B7.txt",
+      "format": "txt",
+      "keywords": [
+        "governance",
+        "land",
+        "questionnaire",
+        "survey",
+        "tenure",
+        "village",
+        "土地",
+        "承包",
+        "村级",
+        "治理",
+        "问卷"
+      ]
+    },
+    {
+      "title": "安徽农户持续种粮调研_公开数据分析与结果复核",
+      "kind": "分析 Notebook",
+      "path": "notebooks/安徽农户持续种粮调研_公开数据分析与结果复核.ipynb",
+      "url": "https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/notebooks/%E5%AE%89%E5%BE%BD%E5%86%9C%E6%88%B7%E6%8C%81%E7%BB%AD%E7%A7%8D%E7%B2%AE%E8%B0%83%E7%A0%94_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B8%8E%E7%BB%93%E6%9E%9C%E5%A4%8D%E6%A0%B8.ipynb",
+      "format": "ipynb",
+      "keywords": [
+        "household",
+        "农户"
+      ]
+    }
+  ]
+}

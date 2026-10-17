@@ -277,6 +277,7 @@ def main() -> int:
         relative_path
         for relative_path in actual_paths
         if relative_path.startswith("02_公开数据/")
+        and relative_path != "02_公开数据/README.md"
     }
     if actual_public_data != EXPECTED_PUBLIC_DATA_FILES:
         for item in sorted(actual_public_data - EXPECTED_PUBLIC_DATA_FILES):

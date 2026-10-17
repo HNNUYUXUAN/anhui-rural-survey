@@ -1,0 +1,30 @@
+# 安徽农户持续种粮调研项目
+
+> 把地种好，把日子过稳：稳定承包背景下安徽农户持续种粮的约束结构。
+
+淮南师范学院青穗江淮调研团。2025 年 2079 户为主实证，2026 年 570 户与 38 村为并列证据。
+研究材料版本：v1.0.0（2026-09-14）。
+
+## 阅读入口
+
+- [项目首页](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/README.md)
+- [研究报告](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/01_%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/README.md)
+- [研究数据](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/02_%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE/README.md)
+- [图表与制图数据](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/03_%E5%9B%BE%E8%A1%A8/README.md)
+- [参考文献](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/04_%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/README.md)
+- [调查工具](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/05_%E8%B0%83%E6%9F%A5%E5%B7%A5%E5%85%B7/README.md)
+- [Notebook](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/notebooks/README.md)
+- [数据口径](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/DATA.md)
+- [复现指南](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/docs/usage.md)
+- [Agent 接手指南](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/docs/agent-guide.md)
+- [机器资源目录](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/docs/resource-catalog.json)
+- [引用](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/CITATION.cff)
+- [许可证](https://github.com/HNNUYUXUAN/anhui-rural-survey/blob/main/LICENSE)
+
+## 证据与计算
+
+公开输入为聚合统计、模型输出与制图数据。Notebook 可复核比例、图表及文件间一致性；个体层模型重估需要原始分析输入。各题项采用各自有效分母，Logit 结果按条件关联解释，户级与村级资料按并列观察解释。引用数字时附报告章节、结果文件、年份、单位与分母。
+
+核验：`python scripts/verify_release.py`；索引检查：`python scripts/build_discovery.py --check`。
+检索：`python scripts/build_discovery.py --query 合同`。
+执行：`python scripts/build_analysis_notebook.py --execute`，依赖见 `requirements-notebook.txt`。
